@@ -1,6 +1,19 @@
+import sys
 
+def print_description(f):
+    def print_separator():
+        print "" * 64
+        print ":"* 64
+        print "" * 64
 
-description_map = {
+    def wrapper(self):
+        map_name = self.description_map
+        print_separator()
+        print getattr(sys.modules[__name__], map_name)[f.__name__]
+        f(self)
+    return wrapper
+
+lambda_descriptions = {
     "demo_lambda_sort_dicts_by_key_using_function": "Name: Sort Dicts by Key Using Function\n" \
                   "This demo sorts a list of dictionaries by a named key.\n" \
                   "When you have a list of dictionaries you can sort their order \n" \

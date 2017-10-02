@@ -4,21 +4,11 @@ construct an anonymous function, which is a function that does not have a name. 
 tool because you can compute and construct data using fewer lines of code.
 '''
 
-from __meta__ import description_map
+from __meta__ import print_description
 
-def print_description(f):
-    def print_separator():
-        print "" * 64
-        print ":"* 64
-        print "" * 64
-
-    def wrapper(self):
-        print_separator()
-        print description_map[f.__name__]
-        f(self)
-    return wrapper
 
 class LambdaDemo(object):
+    description_map = "lambda_descriptions"
     dict1 = {"key1": "test", "key2": "every", "key3": "worst","key4": "name", "key5": "game"}
     dict2 = {"key1": "checking", "key2": "best", "key3": "foo", "key4": "word", "key5": "less"}
     dict3 = {"key1": "award", "key2": "abe", "key3": "pertain", "key4": "lane", "key5": "grain"}
