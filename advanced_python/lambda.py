@@ -32,9 +32,7 @@ class LambdaDemo(object):
     def demo_lambda_sort_dicts_by_key_using_function(self):
         def getvaluenolambda(current_dict):
             return current_dict["key1"]
-
         sorted_dicts = sorted(self.list_of_dicts, key=getvaluenolambda)
-
         print "List of dicts before sort "
         for dict in self.list_of_dicts: print sorted(dict.items())
         print "\n List of dicts after sort on key name key1"
@@ -42,7 +40,6 @@ class LambdaDemo(object):
 
     @print_description
     def demo_lambda_sort_dicts_by_key_using_lambda(self):
-
         sorted_dicts = sorted(self.list_of_dicts, key=lambda k: k["key2"])
         print "list of dicts before sort "
         for dict in self.list_of_dicts: print sorted(dict.items())
