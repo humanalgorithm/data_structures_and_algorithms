@@ -1,74 +1,110 @@
-import stack
+"""
+Description goes here
+"""
 
-class linkedList:
+from . import print_description, SetupDemo
+
+class LinkedListNode:
     nextNode = None
     value = None
     def __init__(self, value=0, nextNode = None):
         self.nextNode = nextNode
         self.value = value
 
-node7 = linkedList(120, None)
-node6 = linkedList(50, node7)
-node5 = linkedList(25, node6)
-node4 = linkedList(200, node5)
-node3 = linkedList(204, node4)
-node2 = linkedList(130, node3)
-node1 = linkedList(300, node2)
 
-head = node1
-
-def traverseForward(head):
-    node = head
-    print node.value
-    while node.nextNode!=None:
-        node = node.nextNode
+class LinkedListTraversal(object):
+    def traverse_forwards_using_while_loop(self, head):
+        node = head
         print node.value
+        while node.nextNode!=None:
+            node = node.nextNode
+            print node.value
 
-def reverseList(headIn):
-    prev = None
-    current = headIn
-    nextNode = current.nextNode
-    while current!=None:
-        temp = current
-        current = current.nextNode
-        temp.nextNode = prev
-        prev = temp
-    return temp
+    def reverse_order_by_reversing_links(self, headIn):
+        prev = None
+        current = headIn
+        current.nextNode
+        while current != None:
+            temp = current
+            current = current.nextNode
+            temp.nextNode = prev
+            prev = temp
+        return temp
 
-def traverseReverseWithStack(head):
-    current = head
-    stackTest = stack.stack()
-    while current!=None:
-        stackTest.push(current)
-        current = current.nextNode
+    def traverse_reverse_using_stack(self, head):
+        current = head
+        stackTest = []
+        while current!=None:
+            stackTest.append(current)
+            current = current.nextNode
 
-    currentPop = stackTest.pop()
-    while currentPop!=None:
-        print currentPop.value
         currentPop = stackTest.pop()
+        while currentPop!=None:
+            print currentPop.value
+            currentPop = stackTest.pop() if len(stackTest) > 0 else None
 
 
-def reverseLinkedListRecursive(prev, node):
-    if node.nextNode == None:
+    def reverse_order_using_recusion(self, prev, node):
+        if node.nextNode == None:
+            node.nextNode = prev
+            return node
+        head = self.reverse_order_using_recusion(node, node.nextNode)
         node.nextNode = prev
-        return node
-    head = reverseLinkedListRecursive(node,node.nextNode)
-    node.nextNode = prev
-    return head
+        return head
 
 
-print "------traverseForward-----"
-traverseForward(head)
+class LinkedListDemo(SetupDemo):
+    def __init__(self):
+        super(LinkedListDemo, self).setup_demo(__file__)
+        self._setup_nodes()
 
-print "-----traverseReverseWithStack------"
-traverseReverseWithStack(head)
+    def _setup_nodes(self):
+        self.node7 = LinkedListNode(120, None)
+        self.node6 = LinkedListNode(50, self.node7)
+        self.node5 = LinkedListNode(25, self.node6)
+        self.node4 = LinkedListNode(200, self.node5)
+        self.node3 = LinkedListNode(204, self.node4)
+        self.node2 = LinkedListNode(130, self.node3)
+        self.node1 = LinkedListNode(300, self.node2)
 
-print "------reverseList----"
-head = reverseList(head)
-print "------traverseReverseWithStack------"
-traverseReverseWithStack(head)
-print "------reverseRecursive------"
-head = reverseLinkedListRecursive(None, head)
-print "------traverseForward-----"
-traverseForward(head)
-print "-------end program-----"
+        self.head = self.node1
+
+    @print_description
+    def traverse_forwards_using_while_loop(self):
+        self._setup_nodes()
+        linked_list_traversal = LinkedListTraversal()
+        print "traversing linked list forward starting with " + str(self.head.value)
+        linked_list_traversal.traverse_forwards_using_while_loop(self.head)
+
+    @print_description
+    def traverse_reverse_using_stack(self):
+        self._setup_nodes()
+        linked_list_traversal = LinkedListTraversal()
+        print "traversing linked list reverse starting with " + str(self.head.value)
+        linked_list_traversal.traverse_reverse_using_stack(self.head)
+
+    @print_description
+    def reverse_order_by_reversing_links(self):
+        self._setup_nodes()
+        linked_list_traversal = LinkedListTraversal()
+        print "linked list forward traversal before reverse"
+        linked_list_traversal.traverse_forwards_using_while_loop(self.head)
+        new_head = linked_list_traversal.reverse_order_by_reversing_links(self.head)
+        print "linked list forward traversal after reversal"
+        linked_list_traversal.traverse_forwards_using_while_loop(new_head)
+
+    @print_description
+    def reverse_order_using_recursion(self):
+        self._setup_nodes()
+        linked_list_traversal = LinkedListTraversal()
+        print "linked list forward traversal before reverse"
+        linked_list_traversal.traverse_forwards_using_while_loop(self.head)
+        new_head = linked_list_traversal.reverse_order_using_recusion(None, self.head)
+        print "linked list forward traversal after reversal"
+        linked_list_traversal.traverse_forwards_using_while_loop(new_head)
+
+ll_demo = LinkedListDemo()
+demos_to_run = [ll_demo.traverse_forwards_using_while_loop, ll_demo.traverse_reverse_using_stack,
+                ll_demo.reverse_order_by_reversing_links, ll_demo.reverse_order_using_recursion]
+[func() for func in demos_to_run]
+

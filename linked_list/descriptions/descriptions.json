@@ -1,0 +1,41 @@
+{
+  "LinkedListDemo": {
+    "demo_class_description": {
+      "Demo Class Name": "Linked List Demo",
+      "Description": [
+        "Description here"
+      ]
+    },
+    "traverse_forwards_using_while_loop": {
+      "Title": "Traverse Forwards through Linked List Using While Loop",
+      "Input Data": "7 nodes with the following values in order 300, 130, 204, 200, 25, 50, 120",
+      "Description": [
+        "We setup a linked list with nodes from 7 to 1 and then traverse it using a while loop. The ",
+        " while loop iteratively loops through each node and then loads the next_node object for the next ",
+        "loop."
+      ]
+    },
+    "traverse_reverse_using_stack": {
+      "Title": "Traverse reverse through Linked List using a stack method",
+      "Input Data": "7 nodes with the following values in order 300, 130, 204, 200, 25, 50, 120",
+      "Description": [
+        "description goes here"
+      ]
+    },
+    "reverse_order_by_reversing_links": {
+      "Title": "Reverse linked list by reversing links",
+      "Input Data": "7 nodes with the following values in order 300, 130, 204, 200, 25, 50, 120",
+      "Description": ["Each node in the linked list has a next_node property. In this demo we iterate ",
+                      "through each node saving it as a temporary variable and then when we reach ",
+                      "the next node we set its next node to the previous temp node."]
+    },
+    "reverse_order_using_recursion": {
+      "Title": "Reverse order using recursion",
+      "Input Data": "7 nodes with the following values in order 300, 130, 204, 200, 25, 50, 120",
+      "Description": ["Here we reverse the order of a linked list using a recursive method."]
+    }
+  }
+}
+
+
+
