@@ -1,5 +1,12 @@
 {
   "BinarySearchDemo": {
+    "demo_class_description":
+    {
+      "Demo Class Name": "Binary Search Demo",
+      "Description": ["This file sets up a sorted array that we then perform binary search operations on. Binary search",
+        "is achieved in an iterative process by using a while loop to iteratively split the list in half until the desired",
+        " element is found."]
+    },
     "search_for_4": {
       "Title": "Search for 4",
       "Input Data": "[1, 4, 6, 7, 8, 9, 12, 14, 15, 16, 120, 199, 200, 344, 366, 377, 388]",

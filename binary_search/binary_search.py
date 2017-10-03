@@ -31,7 +31,7 @@ class BinarySearchDemo(SetupDemo):
         self.int_list_1 = [1, 4, 6, 7, 8, 9, 12, 14, 15, 16, 120, 199, 200, 344, 366, 377, 388]
         self.int_list_2 = [2, 6, 8, 15, 77, 88, 101]
 
-    def print_found_index(self, index, array_list, *args, **kwargs):
+    def _print_found_index(self, index, array_list, *args, **kwargs):
         element = array_list[index]
         tmp = array_list[index]
         if index == -1:
@@ -45,19 +45,19 @@ class BinarySearchDemo(SetupDemo):
         binary_search1 = BinarySearch(self.int_list_1)
         search_for_4 = binary_search1.binary_search(4)
         print "search for element 4 yields index # --> ", search_for_4
-        self.print_found_index(search_for_4, self.int_list_1)
+        self._print_found_index(search_for_4, self.int_list_1)
 
     def search_for_388(self, *args, **kwargs):
         binary_search1 = BinarySearch(self.int_list_1)
         search_for_388 = binary_search1.binary_search(388)
         print "search for element 4 yields index # --> ", search_for_388
-        self.print_found_index(search_for_388, self.int_list_1)
+        self._print_found_index(search_for_388, self.int_list_1)
 
     def element_not_found(self, *args, **kwargs):
         binary_search1 = BinarySearch(self.int_list_2)
         search_for_102 = binary_search1.binary_search(102)
         print "search for element 102 yields index # --> ", search_for_102
-        self.print_found_index(search_for_102, self.int_list_2)
+        self._print_found_index(search_for_102, self.int_list_2)
 
 
 bst_demo = BinarySearchDemo()

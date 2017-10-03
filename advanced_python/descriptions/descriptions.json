@@ -1,5 +1,12 @@
 {
   "LambdaDemo": {
+    "demo_class_description":
+    {
+      "Demo Class Name": "Lambda Demo",
+      "Description": ["Demonstrates various uses of the lambda function in python. Lambda is a utility that allows you to",
+                      " construct an anonymous function, which is a function that does not have a name. Lambda is a powerful",
+                      " tool because you can compute and construct data using fewer lines of code."]
+    },
     "demo_lambda_sort_dicts_by_key_using_function": {
       "Title": "Sort Dicts by Key Using Function",
       "Input Data": "list_of_dicts is a list containing dictionaries",
