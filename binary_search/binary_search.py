@@ -41,19 +41,22 @@ class BinarySearchDemo(SetupDemo):
             print array_list
             array_list[index] = tmp
 
-    def search_for_4(self, *args, **kwargs):
+    @print_description
+    def search_for_4(self):
         binary_search1 = BinarySearch(self.int_list_1)
         search_for_4 = binary_search1.binary_search(4)
         print "search for element 4 yields index # --> ", search_for_4
         self._print_found_index(search_for_4, self.int_list_1)
 
-    def search_for_388(self, *args, **kwargs):
+    @print_description
+    def search_for_388(self):
         binary_search1 = BinarySearch(self.int_list_1)
         search_for_388 = binary_search1.binary_search(388)
         print "search for element 4 yields index # --> ", search_for_388
         self._print_found_index(search_for_388, self.int_list_1)
 
-    def element_not_found(self, *args, **kwargs):
+    @print_description
+    def element_not_found(self):
         binary_search1 = BinarySearch(self.int_list_2)
         search_for_102 = binary_search1.binary_search(102)
         print "search for element 102 yields index # --> ", search_for_102
@@ -62,4 +65,4 @@ class BinarySearchDemo(SetupDemo):
 
 bst_demo = BinarySearchDemo()
 demos_to_run = [bst_demo.search_for_4, bst_demo.search_for_388, bst_demo.element_not_found]
-[print_description(func)(bst_demo) for func in demos_to_run]
+[func() for func in demos_to_run]

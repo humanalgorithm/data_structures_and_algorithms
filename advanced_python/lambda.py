@@ -19,6 +19,7 @@ class LambdaDemo(SetupDemo):
         self.list_of_dicts.append(self.dict2)
         self.list_of_dicts.append(self.dict3)
 
+    @print_description
     def demo_lambda_sort_dicts_by_key_using_function(self, *args, **kwargs):
         def getvaluenolambda(current_dict):
             return current_dict["key1"]
@@ -28,6 +29,7 @@ class LambdaDemo(SetupDemo):
         print "\n List of dicts after sort on key name key1"
         for dict in sorted_dicts: print sorted(dict.items())
 
+    @print_description
     def demo_lambda_sort_dicts_by_key_using_lambda(self, *args, **kwargs):
         sorted_dicts = sorted(self.list_of_dicts, key=lambda k: k["key2"])
         print "list of dicts before sort "
@@ -35,16 +37,19 @@ class LambdaDemo(SetupDemo):
         print "\n List of dicts after sort on key name key2"
         for dict in sorted_dicts: print sorted(dict.items())
 
+    @print_description
     def demo_lambda_sum(self, *args, **kwargs):
         sum = lambda x, y:   x + y
         print "sum(1, 2) -->", sum(1,2)
         print "sum(10, 20) -->", sum(10, 20)
         print "sum (99, 1) -->", sum(99, 1)
 
+    @print_description
     def demo_lambda_dict_comprehension(self, *args, **kwargs):
         test = lambda x, y, z: "x: " + str(x) + " y: " + str(y) + " z: " + str(z)
         print "test(6, 7, 8) --> ", test(6, 7, 8)
 
+    @print_description
     def demo_lambda_map_use(self, *args, **kwargs):
         print "num_list = [1, 2, 3, 4., 5, 6, 7, 8, 9, 10]"
         print "double_list = map(lambda x: x*2, num_list)"
@@ -60,4 +65,4 @@ demos_to_run = [lambda_demo.demo_lambda_sum,
                 lambda_demo.demo_lambda_sort_dicts_by_key_using_function,
                 lambda_demo.demo_lambda_sort_dicts_by_key_using_lambda]
 
-[print_description(func)(lambda_demo) for func in demos_to_run]
+[func() for func in demos_to_run]

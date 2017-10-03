@@ -36,15 +36,35 @@
     }
   },
   "DirectionalBinarySearchDemo": {
+    "demo_class_description":
+    {
+      "Demo Class Name": "Directional Binary Search Demo",
+      "Description": ["This demo uses binary search to count the number of occurences of an element in a sorted list.",
+        " This is accomplished by 1) finding the right most occurrence of the element to search for 2) finding the left",
+        " most occurrence of the element to search for and then computing the difference in indexes."]
+    },
     "count_occurrences_of_15": {
-      "Title": "Here we are counting occurences of 15",
-      "Input Data": "Some input data",
-      "Description": "Some Description"
+      "Title": "Count Occurrences of 15",
+      "Input Data": "[1, 4, 6, 7, 8, 9, 12, 14, 15, 15, 15, 15, 16, 16, 16, 16, 120, 120, 120, 199, 200, 344, 366, 377, 388]",
+      "Description": ["This will compute the left most occurrence by running binary search and then splitting the ",
+                      "remaining elements to the left. It will then repeat the same method for iteratively splitting ",
+                      "the right side of the array. Finally it will calculate the difference between the right and ",
+                      "left index to get the total count"]
     },
     "count_occurrences_of_120": {
-      "Title": "Here we are counting occurrences of 120",
-      "Input Data": "Some input data",
-      "Description": "Some description"
+      "Title": "Count Occurrences of 120",
+      "Input Data": "[1, 4, 6, 7, 8, 9, 12, 14, 15, 15, 15, 15, 16, 16, 16, 16, 120, 120, 120, 199, 200, 344, 366, 377, 388]",
+      "Description": ["This will compute the left most occurrence by running binary search and then splitting the ",
+                      "remaining elements to the left. It will then repeat the same method for iteratively splitting ",
+                      "the right side of the array. Finally it will calculate the difference between the right and ",
+                      "left index to get the total count"]
+    },
+    "find_only_one_element": {
+      "Title": "Find only one element",
+      "Input Data": "[1, 4, 6, 7, 8, 9, 12, 14, 15, 16, 120, 199, 200, 344, 366, 377, 388]",
+      "Description": ["Here we 3compute the left most and right most occurence of the search element but there is only ",
+                      "one element to be found. The algorithm will compute the differences of the left most and",
+                      " right most index and will find that they are the same index, giving us a result of count of 1"]
     }
   }
 }
