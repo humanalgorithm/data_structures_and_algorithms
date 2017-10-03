@@ -4,7 +4,6 @@ by 1) finding the right most occurrence of the element to search for 2) finding 
  element to search for and then computing the difference in indexes.
 '''
 
-
 from __init__ import print_description
 
 class DirectionalBinarySearch(object):
@@ -44,7 +43,6 @@ class DirectionalBinarySearchDemo(object):
         self.int_list_with_duplicates = [1, 4, 6, 7, 8, 9, 12, 14, 15, 15, 15, 15, 16, 16, 16, 16, 120, 120, 120, 199, 200, 344, 366,
                                     377, 388]
 
-    @print_description
     def count_occurrences_of_15(self):
         search_number = 15
         directional_binary_search = DirectionalBinarySearch(self.int_list_with_duplicates)
@@ -52,7 +50,6 @@ class DirectionalBinarySearchDemo(object):
         print "result is "
         print result
 
-    @print_description
     def count_occurrences_of_120(self):
         search_number = 120
         directional_binary_search = DirectionalBinarySearch(self.int_list_with_duplicates)
@@ -62,4 +59,4 @@ class DirectionalBinarySearchDemo(object):
 
 dbs_demo = DirectionalBinarySearchDemo()
 demos_to_run = [dbs_demo.count_occurrences_of_15, dbs_demo.count_occurrences_of_120]
-[func() for func in demos_to_run]
+[print_description(func()) for func in demos_to_run]
