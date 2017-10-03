@@ -4,7 +4,7 @@ construct an anonymous function, which is a function that does not have a name. 
 tool because you can compute and construct data using fewer lines of code.
 '''
 
-from __meta__ import print_description
+from . import print_description
 
 
 class LambdaDemo(object):

@@ -3,8 +3,7 @@ This file sets up a sorted array that we then perform binary search operations o
 in an iterative process by using a while loop to iteratively split the list in half until the desired
 element is found.
 '''
-
-from __meta__ import print_description
+from . import print_description
 
 class BinarySearch(object):
     def __init__(self, array_list):
@@ -20,14 +19,16 @@ class BinarySearch(object):
                 return mid
             elif self.array_list[mid] < search_num:
                 low = mid+1
+
             elif self.array_list[mid] > search_num:
                 high = mid-1
         return -1
 
 class BinarySearchDemo():
-    description_map = "binary_search_descriptions"
-    int_list_1 = [1, 4, 6, 7, 8, 9, 12, 14, 15, 16, 120, 199, 200, 344, 366, 377, 388]
-    int_list_2 = [2, 6, 8, 15, 77, 88, 101]
+    def __init__(self):
+        self.description_map = self.__class__.__name__
+        self.int_list_1 = [1, 4, 6, 7, 8, 9, 12, 14, 15, 16, 120, 199, 200, 344, 366, 377, 388]
+        self.int_list_2 = [2, 6, 8, 15, 77, 88, 101]
 
     def print_found_index(self, index, array_list):
         element = array_list[index]
@@ -62,6 +63,5 @@ class BinarySearchDemo():
 
 
 bst_demo = BinarySearchDemo()
-demos_to_run = [bst_demo.search_for_4, bst_demo.search_for_388, bst_demo.element_not_found]
-
-for func in demos_to_run: func()
+demos_to_run = [bst_demo.search_for_4 , bst_demo.search_for_388, bst_demo.element_not_found]
+[func() for func in demos_to_run]

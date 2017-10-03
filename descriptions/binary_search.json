@@ -1,0 +1,11 @@
+{
+  "BinarySearchDemo": {
+    "search_for_4": {
+      "Title": "Search for 4",
+      "Input Data": "[1, 4, 6, 7, 8, 9, 12, 14, 15, 16, 120, 199, 200, 344, 366, 377, 388]",
+      "Description": ["Here we set up a binary search with a sorted array and then searching for the number 4. ",
+      "Note that the array  list is sorted, we iteratively split the array in half to get closer to the element we are",
+      " looking for. In this case we end up splitting the array iteratively on the first half of the list "]
+    }
+  }
+}
