@@ -60,7 +60,7 @@ class LowestCommonAncestorDemo(SetupDemo):
         search_element1 = 13
         search_element2 = 6
         print "Tree for path calculation is: "
-        print_tree_from_breadth_first_stack(self.binary_search_tree1)
+        print_tree_from_breadth_first_stack(self.binary_search_tree1, print_method="element")
         print ""
         lowest_common_ancestor = LowestCommonAncestor(self.binary_search_tree1)
         result = lowest_common_ancestor.calculate_lowest_common_ancestor(elem1=search_element1, elem2=search_element2)
@@ -71,7 +71,7 @@ class LowestCommonAncestorDemo(SetupDemo):
         search_element1 = 16
         search_element2 = 18
         print "Tree for path calculation is: "
-        print_tree_from_breadth_first_stack(self.binary_search_tree1)
+        print_tree_from_breadth_first_stack(self.binary_search_tree1, print_method="element")
         print ""
         lowest_common_ancestor = LowestCommonAncestor(self.binary_search_tree1)
         result = lowest_common_ancestor.calculate_lowest_common_ancestor(elem1=search_element1, elem2=search_element2)
@@ -82,7 +82,7 @@ class LowestCommonAncestorDemo(SetupDemo):
         search_element1 = 6
         search_element2 = 23
         print "Tree for path calculation is: "
-        print_tree_from_breadth_first_stack(self.binary_search_tree1)
+        print_tree_from_breadth_first_stack(self.binary_search_tree1, print_method="element")
         print ""
         lowest_common_ancestor = LowestCommonAncestor(self.binary_search_tree1)
         result = lowest_common_ancestor.calculate_lowest_common_ancestor(elem1=search_element1, elem2=search_element2)

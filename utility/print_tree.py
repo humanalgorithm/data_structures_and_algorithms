@@ -1,7 +1,26 @@
 import math
 
+def print_tree_from_breadth_first_stack(stack, print_method="element"):
+    def construct_print_string(print_method):
+        if print_method == "element":
+            return print_element
+        elif print_method == "node":
+            return print_node
+        elif print_method == 'red_black_node':
+            return print_red_black_node
 
-def print_tree_from_breadth_first_stack(stack):
+    def print_element(print_str, obj, index):
+        print_str[index] = str(obj) if obj else 'x'
+        return  print_str
+
+    def print_node(print_str, obj, index):
+        print_str[index] = str(obj.value) if obj else 'x'
+        return print_str
+
+    def print_red_black_node(print_str, obj, index):
+        print_str[index] = str(obj.value) + str(obj.color[0]) if getattr(obj, "value") else 'x'
+        return print_str
+
     if stack == None:
         return
     print_space = 64
@@ -25,8 +44,8 @@ def print_tree_from_breadth_first_stack(stack):
             element_printing_count = (i - start_index) + 1
             if element_printing_count <= split_level:
                 index = (element_printing_count * num_spaces) + offset
-                print_str[index] = str(stack[i]) if stack[i] else 'x'
+                print_str = construct_print_string(print_method)(print_str, stack[i], index)
             elif element_printing_count >= split_level:
-                index = (print_space) - ((elements_at_level + 1 - element_printing_count) * (num_spaces))-offset
-                print_str[index] = str(stack[i]) if stack[i] else 'x'
+                index = (print_space) - ((elements_at_level + 1 - element_printing_count) * (num_spaces)) - offset
+                print_str = construct_print_string(print_method)(print_str, stack[i], index)
         print ''.join(print_str)
