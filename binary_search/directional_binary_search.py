@@ -40,8 +40,8 @@ class DirectionalBinarySearchDemo(SetupDemo):
     def __init__(self):
         super(DirectionalBinarySearchDemo, self).setup_demo(__file__)
         self.int_list_unique_only = [1, 4, 6, 7, 8, 9, 12, 14, 15, 16, 120, 199, 200, 344, 366, 377, 388]
-        self.int_list_with_duplicates = [1, 4, 6, 7, 8, 9, 12, 14, 15, 15, 15, 15, 16, 16, 16, 16, 120, 120, 120, 199, 200, 344, 366,
-                                    377, 388]
+        self.int_list_with_duplicates = [1, 4, 6, 7, 8, 9, 12, 14, 15, 15, 15, 15, 16, 16, 16, 16, 120, 120, 120, 199,
+                                         200, 344, 366, 377, 388]
 
     @print_description
     def count_occurrences_of_15(self):
@@ -64,8 +64,7 @@ class DirectionalBinarySearchDemo(SetupDemo):
         search_number = 12
         directional_binary_search = DirectionalBinarySearch(self.int_list_unique_only)
         result = directional_binary_search.count_number_of_occurrences(search_number)
-        print "result is "
-        print result
+        print "result is ", result
 
 dbs_demo = DirectionalBinarySearchDemo()
 demos_to_run = [dbs_demo.count_occurrences_of_15, dbs_demo.count_occurrences_of_120, dbs_demo.find_only_one_element]

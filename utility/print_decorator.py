@@ -58,9 +58,3 @@ def print_description(func):
         _print_class_and_function_descriptions(self)
         func(self)
     return wrapper
-
-class SetupDemo(object):
-    def setup_demo(self, file):
-        self.__file__ = file
-        self.description_map = self.__class__.__name__
-        self.class_description_printed = False

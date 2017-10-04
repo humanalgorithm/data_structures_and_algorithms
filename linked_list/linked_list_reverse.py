@@ -83,6 +83,7 @@ class LinkedListDemo(SetupDemo):
         print "traversing linked list reverse starting with " + str(self.head.value)
         linked_list_traversal.traverse_reverse_using_stack(self.head)
 
+
     @print_description
     def reverse_order_by_reversing_links(self):
         self._setup_nodes()

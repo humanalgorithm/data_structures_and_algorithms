@@ -66,5 +66,56 @@
                       "one element to be found. The algorithm will compute the differences of the left most and",
                       " right most index and will find that they are the same index, giving us a result of count of 1"]
     }
+  },
+  "LowestCommonAncestorDemo": {
+    "demo_class_description":
+    {
+      "Demo Class Name": "Lowest Common Ancestor Demo",
+      "Description": ["Description goes here"]
+    },
+    "lowest_common_ancestor_for_13_and_6":
+    {
+      "Title": "Find the lowest common ancestor of 13 and 6",
+      "Input Data": "Input Data Here",
+      "Description": ["Description Goes Here"]
+    },
+    "lowest_common_ancestor_for_16_and_18":
+    {
+      "Title": "Find the lowest common ancestor of 14 and 17",
+      "Input Data": "Input Data Here",
+      "Description": ["Description Goes Here"]
+    },
+    "lowest_common_ancestor_for_6_and_23":
+    {
+      "Title": "Find the lowest common ancestor of 6 and 23",
+      "Input Data": "Input Data Here",
+      "Description": ["Description Goes Here"]
+    }
+  },
+  "BinarySearchTreeDemo": {
+    "demo_class_description": {
+      "Demo Class Name": "Lowest Common Ancestor Demo",
+      "Description": ["Description goes here"]
+    },
+    "valid_bst_checks":
+    {
+      "Title": "Checks to Verify that This is a Valid BST",
+      "Input Data": "Some input data",
+      "Description": "descrpition goes here"
+    },
+    "delete_14_node_demo":
+    {
+      "Title": "Delete the 14 node from the binary search tree",
+      "Input Data": "Some input data",
+      "Description": "descrpition goes here"
+    },
+    "delete_root_node_demo":
+    {
+      "Title": "Delete the root node from the binary search tree",
+      "Input Data": "Some input data",
+      "Description": "descrpition goes here"
+    }
   }
+
+
 }
