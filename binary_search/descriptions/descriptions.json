@@ -103,9 +103,9 @@
       "Input Data": "Some input data",
       "Description": "descrpition goes here"
     },
-    "delete_14_node":
+    "delete_10_node":
     {
-      "Title": "Delete the 14 node from the binary search tree",
+      "Title": "Delete the 10 node from the binary search tree",
       "Input Data": "Some input data",
       "Description": "descrpition goes here"
     },
