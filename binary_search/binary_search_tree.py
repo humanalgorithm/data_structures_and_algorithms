@@ -193,7 +193,7 @@ class BinarySearchTreeDemo(SetupDemo):
         self._run_valid_bst_checks(bst)
 
     @print_description
-    def delete_14_node_demo(self):
+    def delete_14_node(self):
         bst = BinarySearchTree()
         bst.setup_nodes()
         bst.traverse_bst(bst.root)
@@ -203,7 +203,7 @@ class BinarySearchTreeDemo(SetupDemo):
         self._run_valid_bst_checks(bst)
 
     @print_description
-    def delete_root_node_demo(self):
+    def delete_root_node(self):
         bst = BinarySearchTree()
         bst.setup_nodes()
         bst.traverse_bst(bst.root)
@@ -212,48 +212,20 @@ class BinarySearchTreeDemo(SetupDemo):
         bst.traverse_bst(bst.root)
         self._run_valid_bst_checks(bst)
 
+    def delete_root_node_twice(self):
+        bst = BinarySearchTree()
+        bst.setup_nodes()
+        bst.traverse_bst(bst.root)
+        print "Deleting root node --->"
+        bst.delete_node(None, bst.root, bst.root)
+        print "Deleting root node again -->"
+        bst.delete_node(None, bst.root, bst.root)
+        self._run_valid_bst_checks(bst)
+
+
 bst_demo = BinarySearchTreeDemo()
-demos_to_run = [bst_demo.valid_bst_checks, bst_demo.delete_14_node_demo, bst_demo.delete_root_node_demo]
+demos_to_run = [bst_demo.valid_bst_checks, bst_demo.delete_14_node, bst_demo.delete_root_node,
+                bst_demo.delete_root_node_twice]
 [func() for func in demos_to_run]
-
-
-'''
-print "------setting up BST-----"
-bst = bst()
-bst.setup_nodes()
-print "-----original BST------"
-bst.traverse_bst(bst.root)
-print ""
-print "--is root left subtree lesser? " + str(bst.is_subtree_lesser(bst.root.value, bst.root.left_node))
-print "--is root right subtree greater? "  + str(bst.is_subtree_greater(bst.root.value,bst.root.right_node))
-print "==is this a valid bst? " + str(bst.validate_is_bst(bst.root))
-
-print ""
-print "-----delete fourteen----"
-bst.delete_node(None, bst.root, bst.fourteenNode)
-bst.traverse_bst(bst.root)
-print ""
-print "-----delete root----"
-bst.delete_node(None, bst.root, bst.root)
-print "---traverse after delete---"
-bst.traverse_bst(bst.root)
-print "--is root left subtree lesser? " + str(bst.is_subtree_lesser(bst.root.value, bst.root.left_node))
-print "--is root right subtree greater? "  + str(bst.is_subtree_greater(bst.root.value,bst.root.right_node))
-print "==is this a valid bst? " + str(bst.validate_is_bst(bst.root))
-print ""
-print "-----delete root again----"
-bst.delete_node(None, bst.root, bst.root)
-print "---traverse after delete---"
-bst.traverse_bst(bst.root)
-print "--is root left subtree lesser? " + str(bst.is_subtree_lesser(bst.root.value, bst.root.left_node))
-print "--is root right subtree greater? "  + str(bst.is_subtree_greater(bst.root.value,bst.root.right_node))
-print "==is this a valid bst? " + str(bst.validate_is_bst(bst.root))
-
-
-
-
-
-'''
-
 
 

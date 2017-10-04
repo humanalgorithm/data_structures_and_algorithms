@@ -103,15 +103,21 @@
       "Input Data": "Some input data",
       "Description": "descrpition goes here"
     },
-    "delete_14_node_demo":
+    "delete_14_node":
     {
       "Title": "Delete the 14 node from the binary search tree",
       "Input Data": "Some input data",
       "Description": "descrpition goes here"
     },
-    "delete_root_node_demo":
+    "delete_root_node":
     {
       "Title": "Delete the root node from the binary search tree",
+      "Input Data": "Some input data",
+      "Description": "descrpition goes here"
+    },
+    "delete_root_node_twice":
+    {
+      "Title": "Delete the root node and then delete the new root node again",
       "Input Data": "Some input data",
       "Description": "descrpition goes here"
     }
