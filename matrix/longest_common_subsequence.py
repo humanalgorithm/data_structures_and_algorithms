@@ -49,9 +49,9 @@ class LongestCommonSubsequenceDemo(SetupDemo):
         result = lc_subsequence.longest_common_sequence_recursion(self.sequence1, self.sequence2)
         print "Result of recursive approach is ", result
 
+if __name__ == "__main__":
+    lc_subsequence_demo = LongestCommonSubsequenceDemo()
+    demos_to_run = [lc_subsequence_demo.longest_common_sequence_iterate,
+                    lc_subsequence_demo.longest_common_sequence_recursion]
 
-lc_subsequence_demo = LongestCommonSubsequenceDemo()
-demos_to_run = [lc_subsequence_demo.longest_common_sequence_iterate,
-                lc_subsequence_demo.longest_common_sequence_recursion]
-
-[func() for func in demos_to_run]
+    [func() for func in demos_to_run]

@@ -1,0 +1,31 @@
+{
+  "AllAnagramsDemo": {
+    "demo_class_description": {
+      "Demo Class Name": "AllAnagramsDemo",
+      "Description": [
+        "Description here"
+      ]
+    },
+    "anagrams_recursion_on_pre_and_post_string": {
+      "Title": "anagrams_recursion_on_pre_and_post_string",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "anagrams_swap_on_step_and_index": {
+      "Title": "anagrams_swap_on_step_and_index",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "anagrams_swap_on_step_and_index_2": {
+      "Title": "anagrams_swap_on_step_and_index_2",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    }
+  }
+}

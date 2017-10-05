@@ -60,8 +60,7 @@ class StackDemo(SetupDemo):
             self._print_pop_messagge(element)
             self._print_stack_status(stack)
 
-
-
-stack_demo = StackDemo()
-demos_to_run = [stack_demo.push_five_items_then_pop_five_items, stack_demo.push_four_then_pop_four]
-[func() for func in demos_to_run]
+if __name__ == "__main__":
+    stack_demo = StackDemo()
+    demos_to_run = [stack_demo.push_five_items_then_pop_five_items, stack_demo.push_four_then_pop_four]
+    [func() for func in demos_to_run]

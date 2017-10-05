@@ -98,8 +98,9 @@ class QueueUsingStacksDemo(SetupDemo):
 
         self._process_number_of_items(queue_stack, 1, stack1, stack2)
 
-queue_stack_demo = QueueUsingStacksDemo()
-demos_to_run = [queue_stack_demo.add_4_elements_and_then_process_them_all,
-                queue_stack_demo.add_two_elements_process_two_then_add_two_more_then_proces_remaining_two,
-                queue_stack_demo.add_two_process_one_add_one_one_process_one_add_one_process_one]
-[func() for func in demos_to_run]
+if __name__ == "__main__":
+    queue_stack_demo = QueueUsingStacksDemo()
+    demos_to_run = [queue_stack_demo.add_4_elements_and_then_process_them_all,
+                    queue_stack_demo.add_two_elements_process_two_then_add_two_more_then_proces_remaining_two,
+                    queue_stack_demo.add_two_process_one_add_one_one_process_one_add_one_process_one]
+    [func() for func in demos_to_run]
