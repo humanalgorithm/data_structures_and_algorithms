@@ -2,33 +2,52 @@
   "QueueUsingStacksDemo": {
     "demo_class_description": {
       "Demo Class Name": "QueueUsingStacksDemo",
-      "Description": ["Description here"]
+      "Description": [
+        "Description here"
+      ]
     },
     "add_4_elements_and_then_process_them_all": {
       "Title": "add_4_elements_and_then_process_them_all",
       "Input Data": "Input data",
-      "Description": ["Description goes here"]
+      "Description": [
+        "Description goes here"
+      ]
     },
     "add_two_elements_process_two_then_add_two_more_then_proces_remaining_two": {
       "Title": "add_two_elements_process_two_then_add_two_more_then_proces_remaining_two",
       "Input Data": "Input data",
-      "Description": ["Description goes here"]
+      "Description": [
+        "Description goes here"
+      ]
     },
     "add_two_process_one_add_one_one_process_one_add_one_process_one": {
       "Title": "add_two_process_one_add_one_one_process_one_add_one_process_one",
       "Input Data": "Input data",
-      "Description": ["Description goes here"]
+      "Description": [
+        "Description goes here"
+      ]
     }
   },
-    "StackDemo": {
+  "StackDemo": {
     "demo_class_description": {
       "Demo Class Name": "StackDemo",
-      "Description": ["Description here"]
+      "Description": [
+        "Description here"
+      ]
     },
-    "test1": {
-      "Title": "test1",
+    "push_five_items_then_pop_five_items": {
+      "Title": "push_five_items_then_pop_five_items",
       "Input Data": "Input data",
-      "Description": ["Description goes here"]
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "push_four_then_pop_four": {
+      "Title": "push_four_then_pop_four",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
     }
   }
 }

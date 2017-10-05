@@ -21,8 +21,47 @@ class FILOStack(object):
 
 class StackDemo(SetupDemo):
     def __init__(self):
-        super(StackDemo, self).setup_demo()
+        super(StackDemo, self).setup_demo(__file__)
+
+    def _print_stack(self, stack):
+        print "Stack is --> ", stack.stack
+
+    def _print_pushing_item(self, element):
+        print "Appending element ", element
+
+    def _print_stack_status(self, stack):
+        print "Stack currently is -- >"
+        for element in stack.stack:
+            print "        |" + str(element) + "|,"
+
+    def _print_pop_messagge(self, element):
+        print "Popping from stack and got element --> ", element
 
     @print_description
-    def test_1(self):
-        pass
+    def push_five_items_then_pop_five_items(self):
+        stack = FILOStack()
+        elements = [5, 90, 303, 500, 1010]
+        for element in elements:
+            self._print_pushing_item(element)
+            stack.push(element)
+            self._print_stack_status(stack)
+
+    @print_description
+    def push_four_then_pop_four(self):
+        stack = FILOStack()
+        elements = ['A', 'B', 'C', 'D']
+        for element in elements:
+            self._print_pushing_item(element)
+            stack.push(element)
+            self._print_stack_status(stack)
+
+        for i in range(0, len(elements)):
+            element = stack.pop()
+            self._print_pop_messagge(element)
+            self._print_stack_status(stack)
+
+
+
+stack_demo = StackDemo()
+demos_to_run = [stack_demo.push_five_items_then_pop_five_items, stack_demo.push_four_then_pop_four]
+[func() for func in demos_to_run]
