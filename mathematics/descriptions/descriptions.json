@@ -1,0 +1,26 @@
+{
+  "FibonacciDemo": {
+    "demo_class_description": {
+      "Demo Class Name": "Fibonacci number calculation",
+      "Description": ["Description here"]
+    },
+    "fibonacci_at_position_recursive_calculation_9th_item": {
+      "Title": "Fibonacci of 9th position using recursion to calculate",
+      "Input Data": "Input data",
+      "Description": ["Description goes here"]
+    },
+    "fibonacci_using_loop_7th_item": {
+      "Title": "Fibonacci calculation up to 7th item using a loop",
+      "Input Data": "Input data",
+      "Description": ["Description goes here"]
+    },
+    "fibonacci_recursive_array_5th_item": {
+      "Title": "Fibonacci calculation up to 5th item using an array with recursion",
+      "Input Data": "Input data",
+      "Description": ["Description goes here"]
+    }
+  }
+}
+
+
+

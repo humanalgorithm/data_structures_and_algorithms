@@ -27,7 +27,6 @@ class BinarySearch(object):
 class BinarySearchDemo(SetupDemo):
     def __init__(self):
         super(BinarySearchDemo, self).setup_demo(__file__)
-        self.__file__ = __file__
         self.int_list_1 = [1, 4, 6, 7, 8, 9, 12, 14, 15, 16, 120, 199, 200, 344, 366, 377, 388]
         self.int_list_2 = [2, 6, 8, 15, 77, 88, 101]
 
