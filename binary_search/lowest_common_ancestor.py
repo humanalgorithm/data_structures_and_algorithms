@@ -12,7 +12,7 @@
 '''
 #[15, 10, 20, 7, 12, 17, 22, 6, 9, 11, 13, 16, 18, 21, 23]
 
-from __init__ import print_description, SetupDemo, print_tree_from_breadth_first_stack
+from . import print_description, SetupDemo, print_tree_from_breadth_first_stack
 
 class LowestCommonAncestor(object):
 
@@ -88,9 +88,9 @@ class LowestCommonAncestorDemo(SetupDemo):
         result = lowest_common_ancestor.calculate_lowest_common_ancestor(elem1=search_element1, elem2=search_element2)
         print "Lowest ancestor between " + str(search_element1) + " and " + str(search_element2) + " is " + str(result)
 
-
-lowest_common_ancestor_demo = LowestCommonAncestorDemo()
-demos_to_run = [lowest_common_ancestor_demo.lowest_common_ancestor_for_13_and_6,
-                lowest_common_ancestor_demo.lowest_common_ancestor_for_16_and_18,
-                lowest_common_ancestor_demo.lowest_common_ancestor_for_6_and_23]
-[func() for func in demos_to_run]
+if __name__ == "__main__":
+    lowest_common_ancestor_demo = LowestCommonAncestorDemo()
+    demos_to_run = [lowest_common_ancestor_demo.lowest_common_ancestor_for_13_and_6,
+                    lowest_common_ancestor_demo.lowest_common_ancestor_for_16_and_18,
+                    lowest_common_ancestor_demo.lowest_common_ancestor_for_6_and_23]
+    [func() for func in demos_to_run]

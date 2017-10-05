@@ -62,7 +62,7 @@ class BinarySearchDemo(SetupDemo):
         print "search for element 102 yields index # --> ", search_for_102
         self._print_found_index(search_for_102, self.int_list_2)
 
-
-bst_demo = BinarySearchDemo()
-demos_to_run = [bst_demo.search_for_4, bst_demo.search_for_388, bst_demo.element_not_found]
-[func() for func in demos_to_run]
+if __name__ == "__main__":
+    bst_demo = BinarySearchDemo()
+    demos_to_run = [bst_demo.search_for_4, bst_demo.search_for_388, bst_demo.element_not_found]
+    [func() for func in demos_to_run]

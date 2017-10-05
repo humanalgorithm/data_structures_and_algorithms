@@ -1,11 +1,12 @@
 {
   "BinarySearchDemo": {
-    "demo_class_description":
-    {
+    "demo_class_description": {
       "Demo Class Name": "Binary Search Demo",
-      "Description": ["This file sets up a sorted array that we then perform binary search operations on. Binary search",
+      "Description": [
+        "This file sets up a sorted array that we then perform binary search operations on. Binary search",
         "is achieved in an iterative process by using a while loop to iteratively split the list in half until the desired",
-        " element is found."]
+        " element is found."
+      ]
     },
     "search_for_4": {
       "Title": "Search for 4",
@@ -36,92 +37,117 @@
     }
   },
   "DirectionalBinarySearchDemo": {
-    "demo_class_description":
-    {
+    "demo_class_description": {
       "Demo Class Name": "Directional Binary Search Demo",
-      "Description": ["This demo uses binary search to count the number of occurences of an element in a sorted list.",
+      "Description": [
+        "This demo uses binary search to count the number of occurences of an element in a sorted list.",
         " This is accomplished by 1) finding the right most occurrence of the element to search for 2) finding the left",
-        " most occurrence of the element to search for and then computing the difference in indexes."]
+        " most occurrence of the element to search for and then computing the difference in indexes."
+      ]
     },
     "count_occurrences_of_15": {
       "Title": "Count Occurrences of 15",
       "Input Data": "[1, 4, 6, 7, 8, 9, 12, 14, 15, 15, 15, 15, 16, 16, 16, 16, 120, 120, 120, 199, 200, 344, 366, 377, 388]",
-      "Description": ["This will compute the left most occurrence by running binary search and then splitting the ",
-                      "remaining elements to the left. It will then repeat the same method for iteratively splitting ",
-                      "the right side of the array. Finally it will calculate the difference between the right and ",
-                      "left index to get the total count"]
+      "Description": [
+        "This will compute the left most occurrence by running binary search and then splitting the ",
+        "remaining elements to the left. It will then repeat the same method for iteratively splitting ",
+        "the right side of the array. Finally it will calculate the difference between the right and ",
+        "left index to get the total count"
+      ]
     },
     "count_occurrences_of_120": {
       "Title": "Count Occurrences of 120",
       "Input Data": "[1, 4, 6, 7, 8, 9, 12, 14, 15, 15, 15, 15, 16, 16, 16, 16, 120, 120, 120, 199, 200, 344, 366, 377, 388]",
-      "Description": ["This will compute the left most occurrence by running binary search and then splitting the ",
-                      "remaining elements to the left. It will then repeat the same method for iteratively splitting ",
-                      "the right side of the array. Finally it will calculate the difference between the right and ",
-                      "left index to get the total count"]
+      "Description": [
+        "This will compute the left most occurrence by running binary search and then splitting the ",
+        "remaining elements to the left. It will then repeat the same method for iteratively splitting ",
+        "the right side of the array. Finally it will calculate the difference between the right and ",
+        "left index to get the total count"
+      ]
     },
     "find_only_one_element": {
       "Title": "Find only one element",
       "Input Data": "[1, 4, 6, 7, 8, 9, 12, 14, 15, 16, 120, 199, 200, 344, 366, 377, 388]",
-      "Description": ["Here we 3compute the left most and right most occurence of the search element but there is only ",
-                      "one element to be found. The algorithm will compute the differences of the left most and",
-                      " right most index and will find that they are the same index, giving us a result of count of 1"]
+      "Description": [
+        "Here we 3compute the left most and right most occurence of the search element but there is only ",
+        "one element to be found. The algorithm will compute the differences of the left most and",
+        " right most index and will find that they are the same index, giving us a result of count of 1"
+      ]
     }
   },
   "LowestCommonAncestorDemo": {
-    "demo_class_description":
-    {
+    "demo_class_description": {
       "Demo Class Name": "Lowest Common Ancestor Demo",
-      "Description": ["Description goes here"]
+      "Description": [
+        "Description goes here"
+      ]
     },
-    "lowest_common_ancestor_for_13_and_6":
-    {
+    "lowest_common_ancestor_for_13_and_6": {
       "Title": "Find the lowest common ancestor of 13 and 6",
       "Input Data": "Input Data Here",
-      "Description": ["Description Goes Here"]
+      "Description": [
+        "Description Goes Here"
+      ]
     },
-    "lowest_common_ancestor_for_16_and_18":
-    {
+    "lowest_common_ancestor_for_16_and_18": {
       "Title": "Find the lowest common ancestor of 14 and 17",
       "Input Data": "Input Data Here",
-      "Description": ["Description Goes Here"]
+      "Description": [
+        "Description Goes Here"
+      ]
     },
-    "lowest_common_ancestor_for_6_and_23":
-    {
+    "lowest_common_ancestor_for_6_and_23": {
       "Title": "Find the lowest common ancestor of 6 and 23",
       "Input Data": "Input Data Here",
-      "Description": ["Description Goes Here"]
+      "Description": [
+        "Description Goes Here"
+      ]
     }
   },
   "BinarySearchTreeDemo": {
     "demo_class_description": {
       "Demo Class Name": "Lowest Common Ancestor Demo",
-      "Description": ["Description goes here"]
+      "Description": [
+        "Description goes here"
+      ]
     },
-    "valid_bst_checks":
-    {
+    "valid_bst_checks": {
       "Title": "Checks to Verify that This is a Valid BST",
       "Input Data": "Some input data",
       "Description": "descrpition goes here"
     },
-    "delete_10_node":
-    {
+    "delete_10_node": {
       "Title": "Delete the 10 node from the binary search tree",
       "Input Data": "Some input data",
       "Description": "descrpition goes here"
     },
-    "delete_root_node":
-    {
+    "delete_root_node": {
       "Title": "Delete the root node from the binary search tree",
       "Input Data": "Some input data",
       "Description": "descrpition goes here"
     },
-    "delete_root_node_twice":
-    {
+    "delete_root_node_twice": {
       "Title": "Delete the root node and then delete the new root node again",
       "Input Data": "Some input data",
       "Description": "descrpition goes here"
     }
+  },
+  "DepthFirstTraversalDemo": {
+    "demo_class_description": {
+      "Demo Class Name": "Depth First Traversal Demo",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "depth_first_traversal_through_elements": {
+      "Title": "Do a depth first traversal through an array of elements",
+      "Input Data": "Some input data",
+      "Description": "descrpition goes here"
+    },
+    "depth_first_traversal_through_nodes": {
+      "Title": "Do a depth first traversal through an array of elements",
+      "Input Data": "Some input data",
+      "Description": "descrpition goes here"
+    }
   }
-
-
 }

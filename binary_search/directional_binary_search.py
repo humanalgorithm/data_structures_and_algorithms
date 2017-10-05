@@ -66,6 +66,7 @@ class DirectionalBinarySearchDemo(SetupDemo):
         result = directional_binary_search.count_number_of_occurrences(search_number)
         print "result is ", result
 
-dbs_demo = DirectionalBinarySearchDemo()
-demos_to_run = [dbs_demo.count_occurrences_of_15, dbs_demo.count_occurrences_of_120, dbs_demo.find_only_one_element]
-[func() for func in demos_to_run]
+if __name__ == "__main__":
+    dbs_demo = DirectionalBinarySearchDemo()
+    demos_to_run = [dbs_demo.count_occurrences_of_15, dbs_demo.count_occurrences_of_120, dbs_demo.find_only_one_element]
+    [func() for func in demos_to_run]

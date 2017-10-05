@@ -1,56 +1,12 @@
 import random
 from . import print_description, SetupDemo, print_tree_from_breadth_first_stack
 
-
-from level_first_visit import TreeLevelVisit
-
-
-class node:
-    left = None
-    right = None
-    value = None
-    def __init__(self, value = None):
-        self.left = None
-        self.right = None
-        self.value = value
+from depth_first_traversal import DepthFirstTraversal
+from node import node
 
 class BinarySearchTree():
-
-    def setup_nodes(self):
-        self.eightNode = node(8)
-        self.threeNode = node(3)
-        self.twoNode = node(2)
-        self.fourNode =  node(4)
-        self.tenNode =  node(10)
-        self.nineNode =  node(9)
-        self.twelveNode = node(12)
-        self.fourteenNode= node(14)
-        self.twentyNode= node(20)
-        self.root = self.eightNode
-
-        self.root.left = self.threeNode
-
-        self.threeNode.left = self.twoNode
-        self.threeNode.right = self.fourNode
-
-        self.root.right = self.tenNode
-        self.tenNode.right = self.twelveNode
-        self.tenNode.left = self.nineNode
-        #self.twelveNode.right = self.fourteenNode
-
-    def traverse_bst(self, startNode):
-
-        if startNode.left == None and startNode.right == None:
-            print "value: " + str(startNode.value)
-            return
-        #go down the left path
-        if startNode.left !=None:
-            print "value is: "  + str(startNode.value) + " <--- going left"
-            self.traverse_bst(startNode.left)
-
-        if startNode.right!=None:
-            print "value is: "  + str(startNode.value) + " going right -->"
-            self.traverse_bst(startNode.right)
+    def __init__(self, root):
+        self.root = root
 
     def validate_is_bst(self, startNode):
         if startNode.left == None and startNode.right == None:
@@ -167,70 +123,90 @@ class BinarySearchTreeDemo(SetupDemo):
     def __init__(self):
         super(BinarySearchTreeDemo, self).setup_demo(__file__)
 
-    def _run_valid_bst_checks(self, bst):
+    def _run_valid_bst_checks(self, bst, root):
         print "check for is root left subtree lesser --> "
-        result = str(bst.is_subtree_lesser(bst.root.value, bst.root.left))
+        result = str(bst.is_subtree_lesser(root.value, root.left))
         print result
         print ""
         print "check for is root right subtree greater -->"
-        result = str(bst.is_subtree_greater(bst.root.value, bst.root.right))
+        result = str(bst.is_subtree_greater(root.value, root.right))
         print result
 
         print " "
         print "check for is this a valid BST? -->"
-        result = str(bst.validate_is_bst(bst.root))
+        result = str(bst.validate_is_bst(root))
         print result
 
     def _print_tree(self, root):
-        bst_levels_array = TreeLevelVisit().tree_level_visit_node(root)
+        bst_levels_array = DepthFirstTraversal().depth_first_traversal_by_node(root)
         print_tree_from_breadth_first_stack(bst_levels_array, print_method="node")
+
+    def _setup_nodes(self):
+        self.eightNode = node(8)
+        self.threeNode = node(3)
+        self.twoNode = node(2)
+        self.fourNode =  node(4)
+        self.tenNode =  node(10)
+        self.nineNode =  node(9)
+        self.twelveNode = node(12)
+        self.fourteenNode= node(14)
+        self.twentyNode= node(20)
+        self.root = self.eightNode
+
+        self.root.left = self.threeNode
+
+        self.threeNode.left = self.twoNode
+        self.threeNode.right = self.fourNode
+
+        self.root.right = self.tenNode
+        self.tenNode.right = self.twelveNode
+        self.tenNode.left = self.nineNode
+        return self.root
 
     @print_description
     def valid_bst_checks(self):
-        bst = BinarySearchTree()
-        bst.setup_nodes()
+        self._setup_nodes()
+        bst = BinarySearchTree(self.root)
         print "tree is -->"
-        self._print_tree(bst.root)
-        self._run_valid_bst_checks(bst)
+        self._print_tree(self.root)
+        self._run_valid_bst_checks(bst, self.root)
 
     @print_description
     def delete_10_node(self):
-        bst = BinarySearchTree()
-        bst.setup_nodes()
+        self._setup_nodes()
+        bst = BinarySearchTree(self.root)
         print "tree is -->"
-        self._print_tree(bst.root)
+        self._print_tree(self.root)
         print "Deleting 10 node --->"
-        bst.delete_node(None, bst.root, bst.tenNode)
+        bst.delete_node(None, self.root, self.tenNode)
         print "tree is -->"
-        self._print_tree(bst.root)
-        self._run_valid_bst_checks(bst)
+        self._print_tree(self.root)
+        self._run_valid_bst_checks(bst, self.root)
 
     @print_description
     def delete_root_node(self):
-        bst = BinarySearchTree()
-        bst.setup_nodes()
-        self._print_tree(bst.root)
+        self._setup_nodes()
+        bst = BinarySearchTree(self.root)
+        self._print_tree(self.root)
         print "Deleting root node --->"
-        bst.delete_node(None, bst.root, bst.root)
-        self._print_tree(bst.root)
-        self._run_valid_bst_checks(bst)
+        bst.delete_node(None, self.root, self.root)
+        self._print_tree(self.root)
+        self._run_valid_bst_checks(bst, self.root)
 
     def delete_root_node_twice(self):
-        bst = BinarySearchTree()
-        bst.setup_nodes()
-        self._print_tree(bst.root)
+        self._setup_nodes()
+        bst = BinarySearchTree(self.root)
+        self._print_tree(self.root)
         print "Deleting root node --->"
-        bst.delete_node(None, bst.root, bst.root)
-        self._print_tree(bst.root)
+        bst.delete_node(None, self.root, self.root)
+        self._print_tree(self.root)
         print "Deleting root node again -->"
-        bst.delete_node(None, bst.root, bst.root)
-        self._print_tree(bst.root)
-        self._run_valid_bst_checks(bst)
+        bst.delete_node(None, self.root, self.root)
+        self._print_tree(self.root)
+        self._run_valid_bst_checks(bst, self.root)
 
-
-bst_demo = BinarySearchTreeDemo()
-demos_to_run = [bst_demo.valid_bst_checks, bst_demo.delete_10_node, bst_demo.delete_root_node
-                ,bst_demo.delete_root_node_twice]
-[func() for func in demos_to_run]
-
-
+if __name__ == "__main__":
+    bst_demo = BinarySearchTreeDemo()
+    demos_to_run = [bst_demo.valid_bst_checks, bst_demo.delete_10_node, bst_demo.delete_root_node
+                    ,bst_demo.delete_root_node_twice]
+    [func() for func in demos_to_run]

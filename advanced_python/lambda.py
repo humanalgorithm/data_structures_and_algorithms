@@ -58,11 +58,12 @@ class LambdaDemo(SetupDemo):
         print "double_list --> ", double_list
 
 
-lambda_demo = LambdaDemo()
-demos_to_run = [lambda_demo.demo_lambda_sum,
-                lambda_demo.demo_lambda_dict_comprehension,
-                lambda_demo.demo_lambda_map_use,
-                lambda_demo.demo_lambda_sort_dicts_by_key_using_function,
-                lambda_demo.demo_lambda_sort_dicts_by_key_using_lambda]
+if __name__ == "__main__":
+    lambda_demo = LambdaDemo()
+    demos_to_run = [lambda_demo.demo_lambda_sum,
+                    lambda_demo.demo_lambda_dict_comprehension,
+                    lambda_demo.demo_lambda_map_use,
+                    lambda_demo.demo_lambda_sort_dicts_by_key_using_function,
+                    lambda_demo.demo_lambda_sort_dicts_by_key_using_lambda]
 
-[func() for func in demos_to_run]
+    [func() for func in demos_to_run]

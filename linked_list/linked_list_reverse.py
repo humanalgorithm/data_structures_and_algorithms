@@ -104,8 +104,9 @@ class LinkedListDemo(SetupDemo):
         print "linked list forward traversal after reversal"
         linked_list_traversal.traverse_forwards_using_while_loop(new_head)
 
-ll_demo = LinkedListDemo()
-demos_to_run = [ll_demo.traverse_forwards_using_while_loop, ll_demo.traverse_reverse_using_stack,
-                ll_demo.reverse_order_by_reversing_links, ll_demo.reverse_order_using_recursion]
-[func() for func in demos_to_run]
+if __name__ == "__main__":
+    ll_demo = LinkedListDemo()
+    demos_to_run = [ll_demo.traverse_forwards_using_while_loop, ll_demo.traverse_reverse_using_stack,
+                    ll_demo.reverse_order_by_reversing_links, ll_demo.reverse_order_using_recursion]
+    [func() for func in demos_to_run]
 
