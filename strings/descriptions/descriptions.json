@@ -27,5 +27,50 @@
         "Description goes here"
       ]
     }
+  },
+  "CheckStringRotationDemo": {
+    "demo_class_description": {
+      "Demo Class Name": "CheckStringRotationDemo",
+      "Description": [
+        "Checks to see if one string is a substring of anoter. Algorithm should check whether that string is a match ",
+        "both forwards and backwards wrapping around the array when nessecary."
+      ]
+    },
+    "check_string_regular_forwards_match": {
+      "Title": "check_string_regular_forwards_match",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "check_string_forwards_wraparound_match": {
+      "Title": "check_string_forwards_wraparound_match",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "check_string_backwards_wraparound_match": {
+      "Title": "check_string_backwards_wraparound_match",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "check_forwards_string_no_match": {
+      "Title": "check_forwards_string_no_match",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "check_backwards_no_match": {
+      "Title": "check_backwards_no_match",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    }
   }
 }
+
