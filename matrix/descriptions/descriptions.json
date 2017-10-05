@@ -19,6 +19,22 @@
       "Input Data": "Input data",
       "Description": ["Description goes here"]
     }
+  },
+    "LongestCommonSubsequenceDemo": {
+    "demo_class_description": {
+      "Demo Class Name": "LongestCommonSubsequenceDemo",
+      "Description": ["Description here"]
+    },
+    "longest_common_sequence_iterate": {
+      "Title": "longest_common_sequence_iterate",
+      "Input Data": "Input data",
+      "Description": ["Description goes here"]
+    },
+    "longest_common_sequence_recursion": {
+      "Title": "longest_common_sequence_recursion",
+      "Input Data": "Input data",
+      "Description": ["Description goes here"]
+    }
   }
 }
 

@@ -1,5 +1,8 @@
+
 import copy
-class stack:
+from . import SetupDemo, print_description
+
+class FILOStack(object):
     stack = []
     def __init__(self):
         self.stack = []
@@ -14,3 +17,12 @@ class stack:
         temp = copy.copy(self.stack[length])
         del(self.stack[length])
         return temp
+
+
+class StackDemo(SetupDemo):
+    def __init__(self):
+        super(StackDemo, self).setup_demo()
+
+    @print_description
+    def test_1(self):
+        pass
