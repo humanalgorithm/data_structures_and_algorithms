@@ -106,8 +106,10 @@
     },
     "sort_data_set2": {
       "Title": "sort_data_set2",
-      "Input Data": ["data_set2 = [1, 1, 1, 34, 2345, 257, 8, 1, 89, 1, 6234, 56, 2, 45, 2323, 54, 8, 2, 344, 88, 435, ",
-      "8337, 82, 3, 2, 9, 7]"],
+      "Input Data": [
+        "data_set2 = [1, 1, 1, 34, 2345, 257, 8, 1, 89, 1, 6234, 56, 2, 45, 2323, 54, 8, 2, 344, 88, 435, ",
+        "8337, 82, 3, 2, 9, 7]"
+      ],
       "Description": [
         "This will perform bubble sort on data set 2"
       ]
@@ -154,29 +156,39 @@
     "demo_class_description": {
       "Demo Class Name": "InsertionSortDemo",
       "Description": [
-        "Description here"
+        "Insertion is an O(n^2) sorting algorithm by by splitting the array into a sorted side and a unsorted side. On ",
+        "each iteration of the sort it will take an element from the unsorted side and put it into its correct position in",
+        "the sorted side. On each iteration we move the sorted index up by 1. One advantage of insertion sort over bubble",
+        ", sort is that if the next element in the unsorted array is already sorted then we don't need to loop through ",
+        "the entire list, we only  need to compare the last element in the sorted array to first element in the unsorted",
+        "array."
       ]
     },
     "sort_data_set1": {
       "Title": "sort_data_set1",
-      "Input Data": "Input data",
+      "Input Data": [
+        "data_set1 = [2, 6, 8, 2, 3, 787, 23, 4, 66, 33, 99, 345, 34, 2324, 4567, 32, 5, 57, 324, 44, 2, 3,",
+        "3, 32, 32, 456]"
+      ],
       "Description": [
-        "Description goes here"
+        "Here we use insertion sort to sort data set 1"
       ]
     },
     "sort_data_set2": {
       "Title": "sort_data_set2",
-      "Input Data": "Input data",
+      "Input Data": [
+        "data_set2 = [1, 1, 1, 34, 2345, 257, 8, 1, 89, 1, 6234, 56, 2, 45, 2323, 54, 8, 2, 344, 88, 435,",
+        "8337, 82, 3, 2, 9, 7]"
+      ],
       "Description": [
-        "Description goes here"
+        "Here we use insertion sort to sort data set 2"
       ]
     },
     "sort_data_set_small": {
       "Title": "sort_data_set_small",
-      "Input Data": "Input data",
-      "Description": [
-        "Description goes here"
-      ]
+      "Input Data": "data_set_small = [9, 6, 8, 2, 4]",
+      "Description": ["This will insertion bubble set on a small data set. If you want to experiment with the inner ",
+        "workings of the sort this would be easier to debug."]
     }
   }
 }

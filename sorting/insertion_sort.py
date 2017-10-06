@@ -1,10 +1,18 @@
+"""
+Insertion is an O(n^2) sorting algorithm by by splitting the array into a sorted side and a unsorted side. On
+each iteration of the sort it will take an element from the unsorted side and put it into its correct position in
+the sorted side. On each iteration we move the sorted index up by 1. One advantage of insertion sort over bubble
+sort is that if the next element in the unsorted array is already sorted then we don't need to loop through he entire
+list, we only  need to compare the last element in the sorted array to first element in the unsorted array.
+"""
+
 from . import print_description, SetupDemo
 
 
 class InsertionSort(object):
     def insertion_sort(self, dataset):
-        for i in range(1, len(dataset)):
-            j = i
+        for sorted_index in range(1, len(dataset)):
+            j = sorted_index
             while j >= 1 and dataset[j] < dataset[j - 1]:
                 temp = dataset[j - 1]
                 dataset[j - 1] = dataset[j]
