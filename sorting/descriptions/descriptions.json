@@ -85,5 +85,34 @@
         "Description goes here"
       ]
     }
+  },
+  "BubbleSortDemo": {
+    "demo_class_description": {
+      "Demo Class Name": "BubbleSortDemo",
+      "Description": [
+        "Description here"
+      ]
+    },
+    "sort_data_set1": {
+      "Title": "sort_data_set1",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "sort_data_set2": {
+      "Title": "sort_data_set2",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "sort_data_set_small": {
+      "Title": "sort_data_set_small",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    }
   }
 }
