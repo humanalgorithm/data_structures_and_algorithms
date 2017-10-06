@@ -1,5 +1,6 @@
 from . import print_description, SetupDemo
 
+
 class InsertionSort(object):
     def insertion_sort(self, dataset):
         for i in range(1, len(dataset)):
@@ -10,6 +11,7 @@ class InsertionSort(object):
                 dataset[j] = temp
                 j = j - 1
         return dataset
+
 
 class InsertionSortDemo(SetupDemo):
     def __init__(self):
@@ -45,6 +47,7 @@ class InsertionSortDemo(SetupDemo):
     @print_description
     def sort_data_set_small(self):
         self._run_insertion_sort(data_set=self.data_set_small)
+
 
 is_demo = InsertionSortDemo()
 demos_to_run = [is_demo.sort_data_set1, is_demo.sort_data_set2, is_demo.sort_data_set_small]

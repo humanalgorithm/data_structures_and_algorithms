@@ -90,28 +90,34 @@
     "demo_class_description": {
       "Demo Class Name": "BubbleSortDemo",
       "Description": [
-        "Description here"
+        "Bubble sort is a O(n^2) sorting algorithm that works by iteratively looping through the array ",
+        "and then swapping elements to the left when the right element is greater than the left element. The algorithm ",
+        "stops when we make a full pass through the array and perform no swaps. "
       ]
     },
     "sort_data_set1": {
       "Title": "sort_data_set1",
-      "Input Data": "Input data",
+      "Input Data": [
+        "data_set1 = [2, 6, 8, 2, 3, 787, 23, 4, 66, 33, 99, 345, 34, 2324, 4567, 32, 5, 57, 324, 44, 2, 3, 3, 32, 32, 456]"
+      ],
       "Description": [
-        "Description goes here"
+        "This will perform bubble sort on data set 1."
       ]
     },
     "sort_data_set2": {
       "Title": "sort_data_set2",
-      "Input Data": "Input data",
+      "Input Data": ["data_set2 = [1, 1, 1, 34, 2345, 257, 8, 1, 89, 1, 6234, 56, 2, 45, 2323, 54, 8, 2, 344, 88, 435, ",
+      "8337, 82, 3, 2, 9, 7]"],
       "Description": [
-        "Description goes here"
+        "This will perform bubble sort on data set 2"
       ]
     },
     "sort_data_set_small": {
       "Title": "sort_data_set_small",
-      "Input Data": "Input data",
+      "Input Data": "[9, 6, 8, 2, 4]",
       "Description": [
-        "Description goes here"
+        "This will perform bubble set on a small data set. If you want to experiment with the inner workings of the sort ",
+        "this would be easier to debug."
       ]
     }
   },

@@ -1,5 +1,11 @@
+'''
+Bubble sort is a O(n^2) sorting algorithm that works by iteratively looping through the array and then swapping
+elements to the left when the right element is greater than the left element. The algorithm stops when we make a full
+pass through the array and perform no swaps.  
+'''
 
 from . import print_description, SetupDemo
+
 
 class BubbleSort(object):
     def bubble_sort(self, dataset):
@@ -10,16 +16,16 @@ class BubbleSort(object):
             if sorted == True:
                 break
             sorted = True
-            j=0
-            #last i elements will always be sorted
-            while j < len(dataset)-1-i:
-                if dataset[j] > dataset[j+1]:
-                    temp = dataset[j+1]
-                    dataset[j+1] = dataset[j]
+            j = 0
+            # last i elements will always be sorted
+            while j < len(dataset) - 1 - i:
+                if dataset[j] > dataset[j + 1]:
+                    temp = dataset[j + 1]
+                    dataset[j + 1] = dataset[j]
                     dataset[j] = temp
                     sorted = False
-                j+=1
-            i+=1
+                j += 1
+            i += 1
         return dataset
 
 
@@ -57,6 +63,7 @@ class BubbleSortDemo(SetupDemo):
     @print_description
     def sort_data_set_small(self):
         self._run_bubble_sort(data_set=self.data_set_small)
+
 
 bs_demo = BubbleSortDemo()
 demos_to_run = [bs_demo.sort_data_set1, bs_demo.sort_data_set2, bs_demo.sort_data_set_small]
