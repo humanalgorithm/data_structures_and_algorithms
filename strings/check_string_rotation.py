@@ -1,7 +1,6 @@
 '''
-Checks to see if one string is a substring of anoter. Algorithm should check whether
-that string is a match both forwards and backwards wrapping around the array
-when nessecary.
+Checks to see if one string is a substring of another. Algorithm should check whether
+that string is a match both forwards and backwards wrapping around the array when nessecary.
 '''
 
 from . import print_description, SetupDemo

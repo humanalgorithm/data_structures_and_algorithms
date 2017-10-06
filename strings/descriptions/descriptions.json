@@ -76,49 +76,67 @@
     "demo_class_description": {
       "Demo Class Name": "RemoveDuplicatesDemo",
       "Description": [
-        "Description goes here."
+        "In this example we remove duplicate characters from an array using an in place sorting algorithm. Since we ",
+        "complete this in only one loop then the time complexity is O(n) In remove_duplicates we accomplish this by ",
+        "sorting the passed in array, in remove_duplicates_using_string_buffer we use a string ascii value map to assist",
+        "in the comparisons."
       ]
     },
     "remove_duplicates_in_place_string1": {
       "Title": "remove_duplicates_in_place_string1",
-      "Input Data": "Input data",
+      "Input Data": "['a', 'n', 'c', 'd', 'a', 'a', 'n', 't', 't']",
       "Description": [
-        "Description goes here"
+        "This algorithm uses a duplicates pointer to store the index at which all of the elements will be duplicates. As we ",
+        "loop through the string we move duplicates with a swap behind the duplicates pointer and then increment the ",
+        "pointer by +1."
       ]
     },
     "remove_duplicates_in_place_string2": {
       "Title": "remove_duplicates_in_place_string2",
-      "Input Data": "Input data",
+      "Input Data": "['d', 'n', 'c', 'd', 'd', 'q', 'o', 'p', 't']",
       "Description": [
-        "Description goes here"
+        "This algorithm uses a duplicates pointer to store the index at which all of the elements will be duplicates. As we ",
+        "loop through the string we move duplicates with a swap behind the duplicates pointer and then increment the ",
+        "pointer by +1."
       ]
     },
     "remove_duplicates_in_place_string3": {
       "Title": "remove_duplicates_in_place_string3",
-      "Input Data": "Input data",
+      "Input Data": "['d', 'd', 'd', 'd']",
       "Description": [
-        "Description goes here"
+        "This algorithm uses a duplicates pointer to store the index at which all of the elements will be duplicates. As we ",
+        "loop through the string we move duplicates with a swap behind the duplicates pointer and then increment the ",
+        "pointer by +1."
       ]
     },
     "remove_duplicates_using_string_buffer_string1": {
       "Title": "remove_duplicates_using_string_buffer_string1",
-      "Input Data": "Input data",
+      "Input Data": "['a', 'n', 'c', 'd', 'a', 'a', 'n', 't', 't']",
       "Description": [
-        "Description goes here"
+        "This algorithm will first copy all of the a-z and A-Z characters into an array and then use that array as a ",
+        "tracker of whether or not these characters have been seen before during the loop.Once the character is found it",
+        " is marked as true in the a-z A-Z character buffer and copied into the tail pointer of the original string ",
+        "string pointer."
       ]
     },
     "remove_duplicates_using_string_buffer_string2": {
       "Title": "remove_duplicates_using_string_buffer_string2",
-      "Input Data": "Input data",
+      "Input Data": "['d', 'n', 'c', 'd', 'd', 'q', 'o', 'p', 't']",
       "Description": [
-        "Description goes here"
+        "This algorithm will first copy all of the a-z and A-Z characters into an array and then use that array as a ",
+        "tracker of whether or not these characters have been seen before during the loop.Once the character is found it",
+        " is marked as true in the a-z A-Z character buffer and copied into the tail pointer of the original string ",
+        "string pointer."
       ]
     },
     "remove_duplicates_using_string_buffer_string3": {
       "Title": "remove_duplicates_using_string_buffer_string3",
-      "Input Data": "Input data",
+      "Input Data": "['d', 'd', 'd', 'd']",
       "Description": [
-        "Description goes here"
+        "This algorithm will first copy all of the a-z and A-Z characters into an array and then use that array as a ",
+        "tracker of whether or not these characters have been seen before during the loop.Once the character is found it",
+        " is marked as true in the a-z A-Z character buffer and copied into the tail pointer of the original string ",
+        "string pointer."
       ]
     }
   }
