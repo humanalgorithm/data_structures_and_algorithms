@@ -1,3 +1,9 @@
+'''
+In this demo we implement a stack data structure using arrays. Recall that a stack is a first in last out data structure,
+which means that as we push an element onto the stack we are pushing that element "on top" of the element that was pushed
+previously. For example if we pushed the elements 1,2,3,4 the stack would be 4, 3, 2, 1 with 4 at the bottom and
+1 at the top.
+'''
 
 import copy
 from . import SetupDemo, print_description
@@ -31,8 +37,9 @@ class StackDemo(SetupDemo):
 
     def _print_stack_status(self, stack):
         print "Stack currently is -- >"
-        for element in stack.stack:
-            print "        |" + str(element) + "|,"
+        stack_len = len(stack.stack)
+        for i in range(stack_len-1, -1, -1):
+            print "        |" + str(stack.stack[i]) + "|,"
 
     def _print_pop_messagge(self, element):
         print "Popping from stack and got element --> ", element

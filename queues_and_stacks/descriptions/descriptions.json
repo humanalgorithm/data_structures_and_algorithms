@@ -38,21 +38,26 @@
     "demo_class_description": {
       "Demo Class Name": "StackDemo",
       "Description": [
-        "Description here"
-      ]
+        "In this demo we implement a stack data structure using arrays. Recall that a stack is a first in last out data ",
+        "structure, which means that as we push an element onto the stack we are pushing that element \"on top\" of the ",
+        "element that was pushed previously. For example if we pushed the elements 1,2,3,4 the stack would be 4, 3, 2, 1",
+        " with 4 at the bottom and 1 at the top."]
     },
     "push_five_items_then_pop_five_items": {
       "Title": "push_five_items_then_pop_five_items",
-      "Input Data": "Input data",
+      "Input Data": "[5, 90, 303, 500, 1010]",
       "Description": [
-        "Description goes here"
+        "In this demo we show the behavior of the array as we push five items onto the array and then pop five items ",
+        "back from the stack. Note that the order we pop the elements will be in reverse order from the order we inserted ",
+        "them."
       ]
     },
     "push_four_then_pop_four": {
       "Title": "push_four_then_pop_four",
-      "Input Data": "Input data",
+      "Input Data": "['A', 'B', 'C', 'D']",
       "Description": [
-        "Description goes here"
+        "Here we push four elements and then pop four elements showing the structure of the stack at each step. Note ",
+        "that the order we pop the elements will be in reverse order from the order we inserted them "
       ]
     }
   }
