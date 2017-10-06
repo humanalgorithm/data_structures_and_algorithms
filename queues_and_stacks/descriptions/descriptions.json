@@ -3,29 +3,35 @@
     "demo_class_description": {
       "Demo Class Name": "QueueUsingStacksDemo",
       "Description": [
-        "Description here"
+        "In this demo we build the behavior of a queue data structure by using two stacks. Recall that a queue is a ",
+        "First in-first out data structure whereas a stack is a first in-last out data structure. In order to get the ",
+        "behavior of a queue with two stacks we reverse the order of the first stack by popping all of the elements out ",
+        "and pushing them into the second stack before adding any elements. Then when we want to get an element we pop ",
+        "from the first stack. Essentially what we are doing here is using the second stack as a temporary holder to ",
+        "reverse the first stack whenever we want to add another element."
       ]
     },
     "add_4_elements_and_then_process_them_all": {
       "Title": "add_4_elements_and_then_process_them_all",
-      "Input Data": "Input data",
-      "Description": [
-        "Description goes here"
+      "Input Data": "elements = [1, 2, 3, 4]",
+      "Description": ["Here we add 4 elements to the simulated queue which will take all of the elements from stack 1",
+        ",put them onto stack 2, add the element and then put them all back in stack 1 at each pass. Effectively when ",
+        "we read from the queue we end up back the elements in first in first out order."
       ]
     },
     "add_two_elements_process_two_then_add_two_more_then_proces_remaining_two": {
       "Title": "add_two_elements_process_two_then_add_two_more_then_proces_remaining_two",
-      "Input Data": "Input data",
-      "Description": [
-        "Description goes here"
-      ]
+      "Input Data": "elements = [5, 18] then 101 and 102",
+      "Description": ["Here we add two elements, pop two two and then add two more. Here we can see how stack 1 and ",
+      "stack 2 is used at each step to build the queue. Note that every time we want to add an element to the queue we",
+        "first pop all of the elements from stack 1, push them to stack 2 and then push the new element to stack 2 in ",
+        "order to get the reverse behavior."]
     },
     "add_two_process_one_add_one_one_process_one_add_one_process_one": {
       "Title": "add_two_process_one_add_one_one_process_one_add_one_process_one",
-      "Input Data": "Input data",
-      "Description": [
-        "Description goes here"
-      ]
+      "Input Data": "['A', 'B'] then 'C' then 'D' ",
+      "Description": ["Here we add two elements, process one, add one, process one and then process one more.",
+      "This demo is designed to show how the stacks are used at each step of the add and process steps."]
     }
   },
   "StackDemo": {

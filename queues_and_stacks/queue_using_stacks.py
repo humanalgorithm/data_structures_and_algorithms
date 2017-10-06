@@ -1,11 +1,20 @@
+"""
+In this demo we build the behavior of a queue data structure by using two stacks. Recall that a queue is a
+First in-first out data structure whereas a stack is a first in-last out data structure. In order to get the behavior of a
+queue with two stacks we reverse the order of the first stack by popping all of the elements out and pushing them into
+the second stack before adding any elements. Then when we want to get an element we pop from the first stack.
+Essentially what we are doing here is using the second stack as a temporary holder to reverse the first stack
+whenever we want to add another element.
+"""
 from stack import FILOStack
 
 from . import SetupDemo, print_description
 
+
 class QueueUsingStacks(object):
     def add_element(self, element, stack1, stack2):
         current = stack1.pop()
-        while current!= None:
+        while current != None:
             stack2.push(current)
             current = stack1.pop()
 
@@ -13,18 +22,19 @@ class QueueUsingStacks(object):
 
     def get_next_element(self, stack1, stack2):
         current = stack2.pop()
-        while current!= None:
-             stack1.push(current)
-             current = stack2.pop()
+        while current != None:
+            stack1.push(current)
+            current = stack2.pop()
 
         return str(stack1.pop())
+
 
 class QueueUsingStacksDemo(SetupDemo):
     def __init__(self):
         super(QueueUsingStacksDemo, self).setup_demo(__file__)
 
     def _print_add_one_element(self, element, stack1, stack2):
-        print "adding element "+ str(element)
+        print "adding element " + str(element)
         self._print_stacks_status(stack1, stack2)
 
     def _print_stacks_status(self, stack1, stack2):
@@ -53,7 +63,7 @@ class QueueUsingStacksDemo(SetupDemo):
 
     def _add_one_element(self, queue_stack, element_add, stack1, stack2):
         queue_stack.add_element(element_add, stack1, stack2)
-        self._print_add_one_element(element_add,stack1, stack2)
+        self._print_add_one_element(element_add, stack1, stack2)
 
     @print_description
     def add_4_elements_and_then_process_them_all(self):
@@ -70,7 +80,7 @@ class QueueUsingStacksDemo(SetupDemo):
         stack1 = FILOStack()
         stack2 = FILOStack()
         queue_stack = QueueUsingStacks()
-        elements = [5, 18, 25, 35]
+        elements = [5, 18]
         self._add_elements(queue_stack, elements, stack1, stack2)
         self._print_FIFO_order_message(elements)
         self._process_number_of_items(queue_stack, 2, stack1, stack2)
@@ -97,6 +107,7 @@ class QueueUsingStacksDemo(SetupDemo):
         self._process_number_of_items(queue_stack, 1, stack1, stack2)
 
         self._process_number_of_items(queue_stack, 1, stack1, stack2)
+
 
 if __name__ == "__main__":
     queue_stack_demo = QueueUsingStacksDemo()
