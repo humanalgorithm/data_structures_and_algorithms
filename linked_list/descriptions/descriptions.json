@@ -2,15 +2,16 @@
   "LinkedListDemo": {
     "demo_class_description": {
       "Demo Class Name": "Linked List Demo",
-      "Description": [
-        "Description here"
+      "Description": ["Here we show several methods for going through a linked list backwards. We demonstrate 1) ",
+        "reversing the order by iteratively reversingthe links 2) traversing in reverse by using a stack and 3) ",
+        "using recursion to reverse the links"
       ]
     },
     "traverse_forwards_using_while_loop": {
       "Title": "Traverse Forwards through Linked List Using While Loop",
       "Input Data": "7 nodes with the following values in order 300, 130, 204, 200, 25, 50, 120",
       "Description": [
-        "We setup a linked list with nodes from 7 to 1 and then traverse it using a while loop. The ",
+        "We setup a linked list with seven nodes from and then traverse it using a while loop. The ",
         " while loop iteratively loops through each node and then loads the next_node object for the next ",
         "loop."
       ]
@@ -18,9 +19,8 @@
     "traverse_reverse_using_stack": {
       "Title": "Traverse reverse through Linked List using a stack method",
       "Input Data": "7 nodes with the following values in order 300, 130, 204, 200, 25, 50, 120",
-      "Description": [
-        "description goes here"
-      ]
+      "Description": ["Here we loop through and put each node onto a stack, then we loop through and pop each node ",
+      "off the stack to effectively read it backwards"]
     },
     "reverse_order_by_reversing_links": {
       "Title": "Reverse linked list by reversing links",
@@ -32,7 +32,10 @@
     "reverse_order_using_recursion": {
       "Title": "Reverse order using recursion",
       "Input Data": "7 nodes with the following values in order 300, 130, 204, 200, 25, 50, 120",
-      "Description": ["Here we reverse the order of a linked list using a recursive method."]
+      "Description": ["Here we reverse the order of a linked list using a recursive method. We recursively pass in ",
+      "the previous node until we reach the last node in the list and then apply its next node to the previous that ",
+      "was passed in and so on."]
+
     }
   }
 }

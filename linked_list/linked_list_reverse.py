@@ -1,5 +1,6 @@
 """
-Description goes here
+Here we show several methods for going through a linked list backwards. We demonstrate 1) reversing the order by
+iteratively reversing the links 2) traversing in reverse by using a stack and 3) using recursion to reverse the links
 """
 
 from . import print_description, SetupDemo
@@ -10,7 +11,6 @@ class LinkedListNode:
     def __init__(self, value=0, nextNode = None):
         self.nextNode = nextNode
         self.value = value
-
 
 class LinkedListTraversal(object):
     def traverse_forwards_using_while_loop(self, head):
@@ -42,7 +42,6 @@ class LinkedListTraversal(object):
         while currentPop!=None:
             print currentPop.value
             currentPop = stackTest.pop() if len(stackTest) > 0 else None
-
 
     def reverse_order_using_recusion(self, prev, node):
         if node.nextNode == None:
