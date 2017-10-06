@@ -1,3 +1,15 @@
+"""
+The longest common subsequence problem checks to see which characters in order in a second string matches those
+same characters in order in the first string. These characters will still match if there are any number of
+erroneous characters between them. For example if string 1 is abced and string 2 is abd then the matching subsequence
+would be abd.
+
+In this file we demonstrate two ways to solve this problem 1) Using a loop to keep track of a matrix counts of matches
+between characters in the first string and characters in the second string and in approach 2) we use two arrays to keep
+track of comparisons between the first and second string, then we recursively go through each index of each array and
+compare the rest of the other array.
+"""
+
 import numpy
 from . import SetupDemo, print_description
 
@@ -35,7 +47,7 @@ class LongestCommonSubsequenceDemo(SetupDemo):
     def __init__(self):
         super(LongestCommonSubsequenceDemo, self).setup_demo(__file__)
         self.sequence1 = ['a', 'c', 'b', 'c', 'f']
-        self.sequence2 = ['a', 'b', 'c', 'd', 'e', 'f']  # a b c f
+        self.sequence2 = ['a', 'b', 'c', 'd', 'e', 'f']
 
     @print_description
     def longest_common_sequence_iterate(self):
@@ -48,6 +60,7 @@ class LongestCommonSubsequenceDemo(SetupDemo):
         lc_subsequence = LongestCommonSubsequence()
         result = lc_subsequence.longest_common_sequence_recursion(self.sequence1, self.sequence2)
         print "Result of recursive approach is ", result
+
 
 if __name__ == "__main__":
     lc_subsequence_demo = LongestCommonSubsequenceDemo()

@@ -59,21 +59,41 @@
     "demo_class_description": {
       "Demo Class Name": "LongestCommonSubsequenceDemo",
       "Description": [
-        "Description here"
+        "The longest common subsequence problem checks to see which characters in order in a second string matches those",
+        " same characters in order in the first string. These characters will still match if there are any number of ",
+        "erroneous characters between them. For example if string 1 is abced and string 2 is abd then the matching ",
+        "subsequence would be abd.\n",
+        "In this file we demonstrate two ways to solve this problem 1) Using a loop to keep track of a matrix counts of ",
+        "matches between characters in the first string and characters in the second string and in approach 2) we use ",
+        "two arrays to keep track of comparisons between the first and second string, then we recursively go through ",
+        "each index of each array and compare the rest of the other array."
       ]
     },
     "longest_common_sequence_iterate": {
       "Title": "longest_common_sequence_iterate",
-      "Input Data": "Input data",
+      "Input Data": [
+        "sequence1 = ['a', 'c', 'b', 'c', 'f'],\n",
+        "sequence2 = ['a', 'b', 'c', 'd', 'e', 'f']"
+      ],
       "Description": [
-        "Description goes here"
+        "In this approach we maintain a 2 dimensional matrix to keep track of matches between the first string and ",
+        "the second. Each character in the second string will be compared against each character in the first string ",
+        "and a match will be noted whenever this occurs. We then take the max of the matches per row of comparisons ",
+        "and add these together to get the number of matches."
       ]
     },
     "longest_common_sequence_recursion": {
       "Title": "longest_common_sequence_recursion",
-      "Input Data": "Input data",
+      "Input Data": [
+        "sequence1 = ['a', 'c', 'b', 'c', 'f'],\n",
+        "sequence2 = ['a', 'b', 'c', 'd', 'e', 'f']"
+      ],
       "Description": [
-        "Description goes here"
+        "In this approach we use two arrays to keep track of comparisons between the first and second ",
+        "string, then we recursively go through each index of each array and compare the rest of the other array. In ",
+        "this manner we end up comparing every element in the first string with every element in the second and every ",
+        "element in the second string with every element in the first. Since we are counting forwards only we don't need",
+        "to worry about if there are any matches going backwards"
       ]
     }
   }
