@@ -2,29 +2,35 @@
   "QuickSortDemo": {
     "demo_class_description": {
       "Demo Class Name": "QuickSortDemo",
-      "Description": [
-        "Description here"
+      "Description": ["Quick sort is an average case O(n log n) and worst case O(n^2). Quicksort works by choosing a ",
+        "pivot element and then sorting around that pivot element. Quicksort uses recursion to continually call itself ",
+        "using a different element as the pivot element on each call. In this implementation we use the partition ",
+        "function sort around the chosen pivot element. As we loop through the elements in the subarray in partition, ",
+        "we find an element greater than the pivot and less than the pivot and swap them. We  do this until we get down",
+        " to one element in each pivot and then return causing all the sorted subportions to merge on return."
       ]
     },
     "sort_data_set1": {
       "Title": "sort_data_set1",
-      "Input Data": "Input data",
+      "Input Data": ["data_set1 = [2, 6, 8, 2, 3, 787, 23, 4, 66, 33, 99, 345, 34, 2324, 4567, 32, 5, 57, 324, 44, 2, ",
+        "3, 3, 32, 32, 456]"],
       "Description": [
-        "Description goes here"
+        "This will perform quicksort on dataset 1."
       ]
     },
     "sort_data_set2": {
       "Title": "sort_data_set2",
-      "Input Data": "Input data",
+      "Input Data": ["data_set2 = [1, 1, 1, 34, 2345, 257, 8, 1, 89, 1, 6234, 56, 2, 45, 2323, 54, 8, 2, 344, 88, 435,",
+        "8337, 82, 3, 2, 9, 7]"],
       "Description": [
-        "Description goes here"
+        "This will perform quicksort on dataset 2."
       ]
     },
     "sort_data_set_small": {
       "Title": "sort_data_set_small",
-      "Input Data": "Input data",
-      "Description": [
-        "Description goes here"
+      "Input Data": "[9, 6, 8, 2, 4]",
+      "Description": ["This will perform quiicksort on a small data set. If you want to experiment with the inner ",
+        "workings of the sort this would be easier to debug."
       ]
     }
   },

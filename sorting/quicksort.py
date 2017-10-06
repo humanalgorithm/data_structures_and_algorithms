@@ -1,11 +1,16 @@
+"""
+Quick sort is an average case O(n log n) and worst case O(n^2). Quicksort works by choosing a pivot element and then
+sorting around that pivot element. Quicksort uses recursion to continually call itself using a different element
+as the pivot element on each call. In this implementation we use the partition function sort around the chosen pivot element.
+As we loop through the elements in the subarray in partition, we find an element greater than the pivot and less than
+the pivot and swap them. We  do this until we get down to one element in each pivot and then return causing all
+the sorted subportions to merge on return.
+"""
 from . import print_description, SetupDemo
 
 
 class QuickSort(object):
-
     def quickSort(self, lo, hi, array):
-        hi = int(hi)
-        lo = int(lo)
         if (hi - lo) < 1:
             return
 
@@ -23,12 +28,12 @@ class QuickSort(object):
 
         while exit == False:
             while i <= hi:
-                i = i + 1
+                i += 1
                 if array[i] >= array[pivot]:
                     break
 
             while j >= lo:
-                j = j - 1
+                j -= 1
                 if array[j] <= array[pivot]:
                     if j <= i:
                         exit = True
