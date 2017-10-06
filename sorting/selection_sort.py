@@ -1,11 +1,16 @@
-from . import print_description, SetupDemo
+"""
+Selection sort is an O(n^2) that works by selecting the lowest element in the array and the moving it to the end of the
+sorted portion of the array. At each iteration move the sorted index of the array + , then we loop through the
+unsorted portion of the array to find the lowest element and then move it to the end of the sorted portion of the array.
+"""
 
+from . import print_description, SetupDemo
 
 class SelectionSort(object):
     def selection_sort(self, data_set):
-        for i in range(0, len(data_set)):
-            j = i + 1
-            currentLowElementIndex = i
+        for sorted_index in range(0, len(data_set)):
+            j = sorted_index + 1
+            currentLowElementIndex = sorted_index
             swap = False
             while j < len(data_set):
                 if data_set[j] < data_set[currentLowElementIndex]:
@@ -14,8 +19,8 @@ class SelectionSort(object):
                 j = j + 1
 
             if swap:
-                temp = data_set[i]
-                data_set[i] = data_set[currentLowElementIndex]
+                temp = data_set[sorted_index]
+                data_set[sorted_index] = data_set[currentLowElementIndex]
                 data_set[currentLowElementIndex] = temp
         return data_set
 
