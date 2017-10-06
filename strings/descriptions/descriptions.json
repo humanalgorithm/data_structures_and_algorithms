@@ -71,6 +71,56 @@
         "Description goes here"
       ]
     }
+  },
+  "RemoveDuplicatesDemo": {
+    "demo_class_description": {
+      "Demo Class Name": "RemoveDuplicatesDemo",
+      "Description": [
+        "Description goes here."
+      ]
+    },
+    "remove_duplicates_in_place_string1": {
+      "Title": "remove_duplicates_in_place_string1",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "remove_duplicates_in_place_string2": {
+      "Title": "remove_duplicates_in_place_string2",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "remove_duplicates_in_place_string3": {
+      "Title": "remove_duplicates_in_place_string3",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "remove_duplicates_using_string_buffer_string1": {
+      "Title": "remove_duplicates_using_string_buffer_string1",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "remove_duplicates_using_string_buffer_string2": {
+      "Title": "remove_duplicates_using_string_buffer_string2",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "remove_duplicates_using_string_buffer_string3": {
+      "Title": "remove_duplicates_using_string_buffer_string3",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    }
   }
 }
 
