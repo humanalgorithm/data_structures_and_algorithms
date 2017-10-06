@@ -1,3 +1,8 @@
+"""
+Merge sort works by breaking the array  into two until there is only one element in each set, then it will then
+put together these smaller sets into a larger set recursively until there the entire set is sorted.
+"""
+
 from . import print_description, SetupDemo
 
 class MergeSort(object):

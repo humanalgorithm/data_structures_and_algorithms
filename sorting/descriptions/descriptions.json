@@ -2,7 +2,8 @@
   "QuickSortDemo": {
     "demo_class_description": {
       "Demo Class Name": "QuickSortDemo",
-      "Description": ["Quick sort is an average case O(n log n) and worst case O(n^2). Quicksort works by choosing a ",
+      "Description": [
+        "Quick sort is an average case O(n log n) and worst case O(n^2). Quicksort works by choosing a ",
         "pivot element and then sorting around that pivot element. Quicksort uses recursion to continually call itself ",
         "using a different element as the pivot element on each call. In this implementation we use the partition ",
         "function sort around the chosen pivot element. As we loop through the elements in the subarray in partition, ",
@@ -12,16 +13,20 @@
     },
     "sort_data_set1": {
       "Title": "sort_data_set1",
-      "Input Data": ["data_set1 = [2, 6, 8, 2, 3, 787, 23, 4, 66, 33, 99, 345, 34, 2324, 4567, 32, 5, 57, 324, 44, 2, ",
-        "3, 3, 32, 32, 456]"],
+      "Input Data": [
+        "data_set1 = [2, 6, 8, 2, 3, 787, 23, 4, 66, 33, 99, 345, 34, 2324, 4567, 32, 5, 57, 324, 44, 2, ",
+        "3, 3, 32, 32, 456]"
+      ],
       "Description": [
         "This will perform quicksort on dataset 1."
       ]
     },
     "sort_data_set2": {
       "Title": "sort_data_set2",
-      "Input Data": ["data_set2 = [1, 1, 1, 34, 2345, 257, 8, 1, 89, 1, 6234, 56, 2, 45, 2323, 54, 8, 2, 344, 88, 435,",
-        "8337, 82, 3, 2, 9, 7]"],
+      "Input Data": [
+        "data_set2 = [1, 1, 1, 34, 2345, 257, 8, 1, 89, 1, 6234, 56, 2, 45, 2323, 54, 8, 2, 344, 88, 435,",
+        "8337, 82, 3, 2, 9, 7]"
+      ],
       "Description": [
         "This will perform quicksort on dataset 2."
       ]
@@ -29,7 +34,8 @@
     "sort_data_set_small": {
       "Title": "sort_data_set_small",
       "Input Data": "[9, 6, 8, 2, 4]",
-      "Description": ["This will perform quiicksort on a small data set. If you want to experiment with the inner ",
+      "Description": [
+        "This will perform quiicksort on a small data set. If you want to experiment with the inner ",
         "workings of the sort this would be easier to debug."
       ]
     }
@@ -41,20 +47,25 @@
         "Selection sort is an O(n^2) that works by selecting the lowest element in the array and the moving it to the ",
         "end of the sorted portion of the array. At each iteration move the sorted index of the array + , then we loop ",
         "through the unsorted portion of the array to find the lowest element and then move it to the end of the sorted ",
-        "portion of the array. "]
+        "portion of the array. "
+      ]
     },
     "sort_data_set1": {
       "Title": "sort_data_set1",
-      "Input Data": ["data_set1 = [2, 6, 8, 2, 9, 787, 332, 4, 22, 33, 99, 345, 23, 2324, 456, 32, 5, 57, 324, 23, 2,",
-      "3, 3, 3, 32, 123]"],
+      "Input Data": [
+        "data_set1 = [2, 6, 8, 2, 9, 787, 332, 4, 22, 33, 99, 345, 23, 2324, 456, 32, 5, 57, 324, 23, 2,",
+        "3, 3, 3, 32, 123]"
+      ],
       "Description": [
         "Here run selection sort on data set 1"
       ]
     },
     "sort_data_set2": {
       "Title": "sort_data_set2",
-      "Input Data": ["data_set2 = [0, 1, 1, 34, 2345, 257, 8, 1, 732, 1, 6234, 82, 2, 45, 2000, 54, 8, 2, 789, 84, 432,",
-        "456, 82, 3, 2, 9, 7]"],
+      "Input Data": [
+        "data_set2 = [0, 1, 1, 34, 2345, 257, 8, 1, 732, 1, 6234, 82, 2, 45, 2000, 54, 8, 2, 789, 84, 432,",
+        "456, 82, 3, 2, 9, 7]"
+      ],
       "Description": [
         "Here we run selection sort on data set 2"
       ]
@@ -62,37 +73,9 @@
     "sort_data_set_small": {
       "Title": "sort_data_set_small",
       "Input Data": "Input data",
-      "Description": ["This will perform selection sort on a small data set. If you want to experiment with the inner ",
+      "Description": [
+        "This will perform selection sort on a small data set. If you want to experiment with the inner ",
         "workings of the sort this would be easier to debug."
-      ]
-    }
-  },
-  "MergeSortDemo": {
-    "demo_class_description": {
-      "Demo Class Name": "MergeSortDemo",
-      "Description": [
-        "Description here"
-      ]
-    },
-    "sort_data_set1": {
-      "Title": "sort_data_set1",
-      "Input Data": "Input data",
-      "Description": [
-        "Description goes here"
-      ]
-    },
-    "sort_data_set2": {
-      "Title": "sort_data_set2",
-      "Input Data": "Input data",
-      "Description": [
-        "Description goes here"
-      ]
-    },
-    "sort_data_set_small": {
-      "Title": "sort_data_set_small",
-      "Input Data": "Input data",
-      "Description": [
-        "Description goes here"
       ]
     }
   },
@@ -137,28 +120,31 @@
     "demo_class_description": {
       "Demo Class Name": "MergeSortDemo",
       "Description": [
-        "Description here"
+        "Merge sort works by breaking the array  into two until there is only one element in each set, ",
+        "then it will then put together these smaller sets into a larger set recursively until there the entire set is sorted."
       ]
     },
     "sort_data_set1": {
       "Title": "sort_data_set1",
-      "Input Data": "Input data",
+      "Input Data": ["data_set1 = [2, 6, 8, 2, 3, 787, 23, 4, 66, 33, 99, 345, 34, 2324, 4567, 32, 5, 57, 324, 44, 2, 3,",
+      "3, 32, 32, 456]"],
       "Description": [
-        "Description goes here"
+        "This will perform merge sort on data set 1"
       ]
     },
     "sort_data_set2": {
       "Title": "sort_data_set2",
       "Input Data": "Input data",
       "Description": [
-        "Description goes here"
+        "This will perform merge sort on data set 2"
       ]
     },
     "sort_data_set_small": {
       "Title": "sort_data_set_small",
-      "Input Data": "Input data",
+      "Input Data": "[9, 6, 8, 2, 4]",
       "Description": [
-        "Description goes here"
+        "This will perform merge sort on a small data set. If you want to experiment with the inner ",
+        "workings of the sort this would be easier to debug."
       ]
     }
   },
@@ -197,8 +183,10 @@
     "sort_data_set_small": {
       "Title": "sort_data_set_small",
       "Input Data": "data_set_small = [9, 6, 8, 2, 4]",
-      "Description": ["This will insertion bubble set on a small data set. If you want to experiment with the inner ",
-        "workings of the sort this would be easier to debug."]
+      "Description": [
+        "This will insertion bubble set on a small data set. If you want to experiment with the inner ",
+        "workings of the sort this would be easier to debug."
+      ]
     }
   }
 }
