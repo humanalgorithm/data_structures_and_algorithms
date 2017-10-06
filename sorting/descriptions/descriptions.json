@@ -1,0 +1,60 @@
+{
+  "QuickSortDemo": {
+    "demo_class_description": {
+      "Demo Class Name": "QuickSortDemo",
+      "Description": [
+        "Description here"
+      ]
+    },
+    "sort_data_set1": {
+      "Title": "sort_data_set1",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "sort_data_set2": {
+      "Title": "sort_data_set2",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "sort_data_set_small": {
+      "Title": "sort_data_set_small",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    }
+  },
+  "SelectionSortDemo": {
+    "demo_class_description": {
+      "Demo Class Name": "SelectionSortDemo",
+      "Description": [
+        "Description here"
+      ]
+    },
+    "sort_data_set1": {
+      "Title": "sort_data_set1",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "sort_data_set2": {
+      "Title": "sort_data_set2",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    },
+    "sort_data_set_small": {
+      "Title": "sort_data_set_small",
+      "Input Data": "Input data",
+      "Description": [
+        "Description goes here"
+      ]
+    }
+  }
+}
