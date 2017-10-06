@@ -1,6 +1,13 @@
+'''
+The lowest common ancestor coding problem is a binary search tree problem in which we take two elements in the
+tree and determine what ancestors they share and which one of these is the lowest in the tree, or rather at the
+deepest level. The way we do this is by finding the paths through the tree for element 1 and element 2 and then
+finding which elements they have in common. Of these elements in common we check which one is the deepest in the
+binary search tree.
+'''
 
-#                     0  1  2 3   4  6   7
-#Tree sample #######
+
+
 
 # to go left --> index  * 2 +1
 # to go right --> index *2 + 2
@@ -55,38 +62,39 @@ class LowestCommonAncestorDemo(SetupDemo):
         self.binary_search_tree1 = [15, 10, 20, 7, 12, 17, 22, 6, 9, 11, 13, 16, 18, 21, 23]
         self.binary_search_tree2 = [6, 4, 9, 3, 5, 7, 10]
 
+    def _log_tree_path(self, binary_search_tree):
+        print "Tree for path calculation is: "
+        print_tree_from_breadth_first_stack(binary_search_tree, print_method="element")
+        print ""
+
+    def _log_lowest_common_ancestor_result(self, search_element1, search_element2, result):
+        message = "Lowest common ancestor is: "
+        print message
+        print "search element1 = {} seach_element2 = {} result = {}".format(search_element1, search_element2, result)
+
+    def _run_lowest_common_ancestor(self, binary_search_tree, search_element1, search_element2, ):
+        self._log_tree_path(self.binary_search_tree1)
+        lowest_common_ancestor = LowestCommonAncestor(binary_search_tree)
+        result = lowest_common_ancestor.calculate_lowest_common_ancestor(elem1=search_element1, elem2=search_element2)
+        self._log_lowest_common_ancestor_result(search_element1, search_element2, result)
+
     @print_description
     def lowest_common_ancestor_for_13_and_6(self):
         search_element1 = 13
         search_element2 = 6
-        print "Tree for path calculation is: "
-        print_tree_from_breadth_first_stack(self.binary_search_tree1, print_method="element")
-        print ""
-        lowest_common_ancestor = LowestCommonAncestor(self.binary_search_tree1)
-        result = lowest_common_ancestor.calculate_lowest_common_ancestor(elem1=search_element1, elem2=search_element2)
-        print "Lowest ancestor between " + str(search_element1) + " and " + str(search_element2) + " is " + str(result)
+        self._run_lowest_common_ancestor(self.binary_search_tree1, search_element1, search_element2)
 
     @print_description
     def lowest_common_ancestor_for_16_and_18(self):
         search_element1 = 16
         search_element2 = 18
-        print "Tree for path calculation is: "
-        print_tree_from_breadth_first_stack(self.binary_search_tree1, print_method="element")
-        print ""
-        lowest_common_ancestor = LowestCommonAncestor(self.binary_search_tree1)
-        result = lowest_common_ancestor.calculate_lowest_common_ancestor(elem1=search_element1, elem2=search_element2)
-        print "Lowest ancestor between " + str(search_element1) + " and " + str(search_element2) + " is " + str(result)
+        self._run_lowest_common_ancestor(self.binary_search_tree1, search_element1, search_element2)
 
     @print_description
     def lowest_common_ancestor_for_6_and_23(self):
         search_element1 = 6
         search_element2 = 23
-        print "Tree for path calculation is: "
-        print_tree_from_breadth_first_stack(self.binary_search_tree1, print_method="element")
-        print ""
-        lowest_common_ancestor = LowestCommonAncestor(self.binary_search_tree1)
-        result = lowest_common_ancestor.calculate_lowest_common_ancestor(elem1=search_element1, elem2=search_element2)
-        print "Lowest ancestor between " + str(search_element1) + " and " + str(search_element2) + " is " + str(result)
+        self._run_lowest_common_ancestor(self.binary_search_tree1, search_element1, search_element2)
 
 if __name__ == "__main__":
     lowest_common_ancestor_demo = LowestCommonAncestorDemo()

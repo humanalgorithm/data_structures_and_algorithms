@@ -78,38 +78,41 @@
   "LowestCommonAncestorDemo": {
     "demo_class_description": {
       "Demo Class Name": "Lowest Common Ancestor Demo",
-      "Description": [
-        "Description goes here"
-      ]
+      "Description":["The lowest common ancestor coding problem is a binary search tree problem in which we take two",
+        " elements in the tree and determine what ancestors they share and which one of these is the lowest in the tree,",
+        " or rather at the deepest level. The way we do this is by finding the paths through the tree for element 1 and ",
+        " element 2 and then finding which elements they have in common. Of these elements in common we check which one ",
+        "is the deepest in the binary search tree. "]
     },
     "lowest_common_ancestor_for_13_and_6": {
       "Title": "Find the lowest common ancestor of 13 and 6",
-      "Input Data": "Input Data Here",
-      "Description": [
-        "Description Goes Here"
-      ]
+      "Input Data": "binary_search_tree1 = [15, 10, 20, 7, 12, 17, 22, 6, 9, 11, 13, 16, 18, 21, 23]",
+      "Description": ["We look for the common ancestor between 13 and 6 which are both elemenets at the deepest levels ",
+                      "of the tree. \n The array reperesents a binary search tree in depth first order, in ",
+                      " order to move to the left we calculate index*2+1 and to move to the right we calculate  ",
+                      "index*2+2"]
     },
     "lowest_common_ancestor_for_16_and_18": {
       "Title": "Find the lowest common ancestor of 14 and 17",
-      "Input Data": "Input Data Here",
-      "Description": [
-        "Description Goes Here"
-      ]
+      "Input Data": "binary_search_tree1 = [15, 10, 20, 7, 12, 17, 22, 6, 9, 11, 13, 16, 18, 21, 23]",
+      "Description": ["We look for the common ancestor between 13 and 6 which are both elemenets at the deepest levels ",
+                      "of the tree. \n The array reperesents a binary search tree in depth first order, in ",
+                      " order to move to the left we calculate index*2+1 and to move to the right we calculate  ",
+                      "index*2+2"]
     },
     "lowest_common_ancestor_for_6_and_23": {
       "Title": "Find the lowest common ancestor of 6 and 23",
-      "Input Data": "Input Data Here",
-      "Description": [
-        "Description Goes Here"
-      ]
+      "Input Data": "binary_search_tree1 = [15, 10, 20, 7, 12, 17, 22, 6, 9, 11, 13, 16, 18, 21, 23]",
+      "Description": ["We look for the common ancestor between 13 and 6 which are both elemenets at the deepest levels ",
+                      "of the tree. \n The array reperesents a binary search tree in depth first order, in ",
+                      " order to move to the left we calculate index*2+1 and to move to the right we calculate  ",
+                      "index*2+2"]
     }
   },
   "BinarySearchTreeDemo": {
     "demo_class_description": {
       "Demo Class Name": "Lowest Common Ancestor Demo",
-      "Description": [
-        "Description goes here"
-      ]
+      "Description": ["Description goes here "]
     },
     "valid_bst_checks": {
       "Title": "Checks to Verify that This is a Valid BST",
