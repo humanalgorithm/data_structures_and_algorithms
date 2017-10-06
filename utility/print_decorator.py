@@ -20,7 +20,7 @@ def print_description(func):
 
         for key in headings:
             line = key + ": " + str(''.join(description_dict[key]))
-            print textwrap.fill(line, width=96)
+            print textwrap.fill(line, width=96, replace_whitespace=False)
             print ""
 
     def _print_separator():

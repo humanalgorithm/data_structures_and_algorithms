@@ -1,5 +1,15 @@
+"""
+This file demonstrates how to count the number of negative numbers in a matrix with each row being sorted. In
+this file we demonstrate three different ways to solve the problem 1) In the naive approach we simply loop through
+every element in each row and count the number of negatives but this doesn't take advantage of the fact that the
+rows are sorted. 2) We show how you can increase the efficiency by counting backwards from the end of each row, until
+you find the highest positive number 3) We do binary search to recursively
+split the row in two down to the highest negative element in the row.
+"""
+
 import numpy
 from . import print_description, SetupDemo
+
 
 class CountNegativeNumbersMatrix():
     def __init__(self, matrix):
@@ -12,7 +22,7 @@ class CountNegativeNumbersMatrix():
         for i in range(0, rows):
             for j in range(0, cols):
                 if self.matrix[i][j] < 0:
-                    neg_num_count +=1
+                    neg_num_count += 1
 
         return neg_num_count
 
@@ -21,9 +31,9 @@ class CountNegativeNumbersMatrix():
         cols = self.matrix.shape[1]
         neg_num_count = 0
         for i in range(0, rows):
-            for j in range(cols-1, -1, -1):
+            for j in range(cols - 1, -1, -1):
                 if self.matrix[i][j] < 0:
-                    neg_num_count +=1
+                    neg_num_count += 1
                 if self.matrix[i][j] > 0:
                     continue
         return neg_num_count
@@ -34,7 +44,7 @@ class CountNegativeNumbersMatrix():
         neg_num_count = 0
 
         def binary_search_for_negative_index(row, low, high, highest_negative=0):
-            mid = (high + low)/2
+            mid = (high + low) / 2
 
             if row[high] < 0 and high > highest_negative:
                 return high
@@ -42,34 +52,33 @@ class CountNegativeNumbersMatrix():
             if low == high:
                 return highest_negative
 
-
             highest_negative_low = binary_search_for_negative_index(row, low, mid, highest_negative)
             highest_negative_high = 0
-            if row[mid+1] <1:
-                highest_negative_high = binary_search_for_negative_index(row, mid+1, high, highest_negative)
+            if row[mid + 1] < 1:
+                highest_negative_high = binary_search_for_negative_index(row, mid + 1, high, highest_negative)
 
             return max(highest_negative_low, highest_negative_high)
 
         def calculate_number_of_elements_by_index(index, row):
-            if index ==-1 or index == 0:
+            if index == -1 or index == 0:
                 return 0
-            return index+1
+            return index + 1
 
         for i in range(0, rows):
             row = self.matrix[i]
-            negative_index = binary_search_for_negative_index(row, low=0, high=len(row)-1)
+            negative_index = binary_search_for_negative_index(row, low=0, high=len(row) - 1)
             neg_num_count += calculate_number_of_elements_by_index(negative_index, row)
         return neg_num_count
 
-class CountNegativeNumbersMatrixDemo(SetupDemo):
 
+class CountNegativeNumbersMatrixDemo(SetupDemo):
     def __init__(self):
         super(CountNegativeNumbersMatrixDemo, self).setup_demo(__file__)
         self.matrix = numpy.array([
-        [-3, -2, -1, -1, -1, -2 ,-3],
-        [1,  2,  3,  4, 5, 6, 7],
-        [-3, -1, -4,  6, 9, 10, 11],
-        [0, 0, 2,  4, 7, 8, 10]], numpy.int32
+            [-3, -2, -1, -1, -1, -2, -3],
+            [1, 2, 3, 4, 5, 6, 7],
+            [-3, -1, -4, 6, 9, 10, 11],
+            [0, 0, 2, 4, 7, 8, 10]], numpy.int32
         )
 
     @print_description
@@ -89,6 +98,7 @@ class CountNegativeNumbersMatrixDemo(SetupDemo):
         count_matrix = CountNegativeNumbersMatrix(self.matrix)
         result_binary_search = count_matrix.count_negative_numbers_binary_search()
         print "The number of negative numbers in this array using binary search is ", result_binary_search
+
 
 if __name__ == "__main__":
     matrix_demo = CountNegativeNumbersMatrixDemo()

@@ -2,38 +2,79 @@
   "CountNegativeNumbersMatrixDemo": {
     "demo_class_description": {
       "Demo Class Name": "CountNegativeNumbersMatrixDemon",
-      "Description": ["Description here"]
+      "Description": [
+        "This file demonstrates how to count the number of negative numbers in a matrix with each row ",
+        "being sorted. In this file we demonstrate three different ways to solve the problem 1) In the naive approach we",
+        " simply loop through every element in each row and count the number of negatives but this doesn't take advantage",
+        " of the fact that the rows are sorted. 2) We show how you can increase the efficiency by counting backwards ",
+        "from the end of each row until you found the highest positive number finally 3) We do",
+        " binary search to recursively split the row in two down to the highest negative element in the row. "
+      ]
     },
     "count_negative_numbers_nested_loop": {
       "Title": "count_negative_numbers_nested_loop",
-      "Input Data": "Input data",
-      "Description": ["Description goes here"]
+      "Input Data": [
+        "\n[-3, -2, -1, -1, -1, -2 ,-3]\n",
+        "[1,  2,  3,  4, 5, 6, 7],\n",
+        "[-3, -1, -4,  6, 9, 10, 11],\n",
+        "[0, 0, 2,  4, 7, 8, 10]]"
+      ],
+      "Description": [
+        "In this approach we take the naive approach and loop through every element in each row. This will",
+        " get us the accurate count but doesn't take advantage of the fact that the rows are sorted. The run time ",
+        "complexity of this algorithm is O(nm) where n is the number of rows and m is the number of columns"
+      ]
     },
     "count_negative_numbers_reverse_scan": {
       "Title": "count_negative_numbers_reverse_scan",
-      "Input Data": "Input data",
-      "Description": ["Description goes here"]
+      "Input Data": [
+        "\n[-3, -2, -1, -1, -1, -2 ,-3]\n",
+        "[1,  2,  3,  4, 5, 6, 7],\n",
+        "[-3, -1, -4,  6, 9, 10, 11],\n",
+        "[0, 0, 2,  4, 7, 8, 10]]"
+      ],
+      "Description": [
+        "In this approach we count backwards from the last element in each row to the first seen occurence of a negative",
+        " positive number, once we see a positive numbner from counting backwards we know that there will be no negative",
+        " numbers to the left of it so we can break out of counting this loop."
+      ]
     },
     "count_negative_numbers_binary_search": {
       "Title": "count_negative_numbers_binary_search",
-      "Input Data": "Input data",
-      "Description": ["Description goes here"]
+      "Input Data": [
+        "\n[-3, -2, -1, -1, -1, -2 ,-3]\n",
+        "[1,  2,  3,  4, 5, 6, 7],\n",
+        "[-3, -1, -4,  6, 9, 10, 11],\n",
+        "[0, 0, 2,  4, 7, 8, 10]]"
+      ],
+      "Description": [
+        "In this approach we utilize binary search to recursively break the row into two until we find the highest index",
+        " of a negative number in the row and then we return that index as the count of negative numbers in that row\n",
+        " As we split the array in two we know that if the higher portion starts with a positive number we can discard",
+        " this half in the search since each row of the array is sorted and positive numbers come after negative ones."
+      ]
     }
   },
-    "LongestCommonSubsequenceDemo": {
+  "LongestCommonSubsequenceDemo": {
     "demo_class_description": {
       "Demo Class Name": "LongestCommonSubsequenceDemo",
-      "Description": ["Description here"]
+      "Description": [
+        "Description here"
+      ]
     },
     "longest_common_sequence_iterate": {
       "Title": "longest_common_sequence_iterate",
       "Input Data": "Input data",
-      "Description": ["Description goes here"]
+      "Description": [
+        "Description goes here"
+      ]
     },
     "longest_common_sequence_recursion": {
       "Title": "longest_common_sequence_recursion",
       "Input Data": "Input data",
-      "Description": ["Description goes here"]
+      "Description": [
+        "Description goes here"
+      ]
     }
   }
 }
