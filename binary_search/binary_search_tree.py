@@ -1,3 +1,14 @@
+'''
+This file implements a binary search tree comprised of node objects. Each node object has left, right and value propereties.
+To construct a binary search tree we start with the root node, and then set a left pointer to a node with a value less
+than the root. We do the same thing for the right and set a pointer to the a right node with a value greater than the root.
+
+This file implements a binary search tree and the ability to add or delete a node. Additionally there are methods to
+check whether the left and right sides of the tree are organized properly according to the definition of a binary
+search tree. Finally there is a method to check whether the entire tree is a valid binary search tree by recursively
+calling itself on the left and right sides of the tree.
+'''
+
 import random
 from . import print_description, SetupDemo, print_tree_from_breadth_first_stack
 
@@ -123,24 +134,6 @@ class BinarySearchTreeDemo(SetupDemo):
     def __init__(self):
         super(BinarySearchTreeDemo, self).setup_demo(__file__)
 
-    def _run_valid_bst_checks(self, bst, root):
-        print "check for is root left subtree lesser --> "
-        result = str(bst.is_subtree_lesser(root.value, root.left))
-        print result
-        print ""
-        print "check for is root right subtree greater -->"
-        result = str(bst.is_subtree_greater(root.value, root.right))
-        print result
-
-        print " "
-        print "check for is this a valid BST? -->"
-        result = str(bst.validate_is_bst(root))
-        print result
-
-    def _print_tree(self, root):
-        bst_levels_array = DepthFirstTraversal().depth_first_traversal_by_node(root)
-        print_tree_from_breadth_first_stack(bst_levels_array, print_method="node")
-
     def _setup_nodes(self):
         self.eightNode = node(8)
         self.threeNode = node(3)
@@ -163,11 +156,30 @@ class BinarySearchTreeDemo(SetupDemo):
         self.tenNode.left = self.nineNode
         return self.root
 
+    def _run_valid_bst_checks(self, bst, root):
+        print "check for is root left subtree lesser --> "
+        result = str(bst.is_subtree_lesser(root.value, root.left))
+        print result
+        print ""
+        print "check for is root right subtree greater -->"
+        result = str(bst.is_subtree_greater(root.value, root.right))
+        print result
+
+        print " "
+        print "check for is this a valid BST? -->"
+        result = str(bst.validate_is_bst(root))
+        print result
+
+    def _print_tree(self, root):
+        print "current tree is --> "
+        bst_levels_array = DepthFirstTraversal().depth_first_traversal_by_node(root)
+        print_tree_from_breadth_first_stack(bst_levels_array, print_method="node")
+        print ""
+
     @print_description
     def valid_bst_checks(self):
         self._setup_nodes()
         bst = BinarySearchTree(self.root)
-        print "tree is -->"
         self._print_tree(self.root)
         self._run_valid_bst_checks(bst, self.root)
 
@@ -175,11 +187,9 @@ class BinarySearchTreeDemo(SetupDemo):
     def delete_10_node(self):
         self._setup_nodes()
         bst = BinarySearchTree(self.root)
-        print "tree is -->"
         self._print_tree(self.root)
         print "Deleting 10 node --->"
         bst.delete_node(None, self.root, self.tenNode)
-        print "tree is -->"
         self._print_tree(self.root)
         self._run_valid_bst_checks(bst, self.root)
 

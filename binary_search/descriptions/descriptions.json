@@ -78,61 +78,83 @@
   "LowestCommonAncestorDemo": {
     "demo_class_description": {
       "Demo Class Name": "Lowest Common Ancestor Demo",
-      "Description":["The lowest common ancestor coding problem is a binary search tree problem in which we take two",
+      "Description": [
+        "The lowest common ancestor coding problem is a binary search tree problem in which we take two",
         " elements in the tree and determine what ancestors they share and which one of these is the lowest in the tree,",
         " or rather at the deepest level. The way we do this is by finding the paths through the tree for element 1 and ",
         " element 2 and then finding which elements they have in common. Of these elements in common we check which one ",
-        "is the deepest in the binary search tree. "]
+        "is the deepest in the binary search tree. "
+      ]
     },
     "lowest_common_ancestor_for_13_and_6": {
       "Title": "Find the lowest common ancestor of 13 and 6",
       "Input Data": "binary_search_tree1 = [15, 10, 20, 7, 12, 17, 22, 6, 9, 11, 13, 16, 18, 21, 23]",
-      "Description": ["We look for the common ancestor between 13 and 6 which are both elemenets at the deepest levels ",
-                      "of the tree. \n The array reperesents a binary search tree in depth first order, in ",
-                      " order to move to the left we calculate index*2+1 and to move to the right we calculate  ",
-                      "index*2+2"]
+      "Description": [
+        "We look for the common ancestor between 13 and 6 which are both elemenets at the deepest levels ",
+        "of the tree. \n The array reperesents a binary search tree in depth first order, in ",
+        " order to move to the left we calculate index*2+1 and to move to the right we calculate  ",
+        "index*2+2"
+      ]
     },
     "lowest_common_ancestor_for_16_and_18": {
       "Title": "Find the lowest common ancestor of 14 and 17",
       "Input Data": "binary_search_tree1 = [15, 10, 20, 7, 12, 17, 22, 6, 9, 11, 13, 16, 18, 21, 23]",
-      "Description": ["We look for the common ancestor between 13 and 6 which are both elemenets at the deepest levels ",
-                      "of the tree. \n The array reperesents a binary search tree in depth first order, in ",
-                      " order to move to the left we calculate index*2+1 and to move to the right we calculate  ",
-                      "index*2+2"]
+      "Description": [
+        "We look for the common ancestor between 13 and 6 which are both elemenets at the deepest levels ",
+        "of the tree. \n The array reperesents a binary search tree in depth first order, in ",
+        " order to move to the left we calculate index*2+1 and to move to the right we calculate  ",
+        "index*2+2"
+      ]
     },
     "lowest_common_ancestor_for_6_and_23": {
       "Title": "Find the lowest common ancestor of 6 and 23",
       "Input Data": "binary_search_tree1 = [15, 10, 20, 7, 12, 17, 22, 6, 9, 11, 13, 16, 18, 21, 23]",
-      "Description": ["We look for the common ancestor between 13 and 6 which are both elemenets at the deepest levels ",
-                      "of the tree. \n The array reperesents a binary search tree in depth first order, in ",
-                      " order to move to the left we calculate index*2+1 and to move to the right we calculate  ",
-                      "index*2+2"]
+      "Description": [
+        "We look for the common ancestor between 13 and 6 which are both elemenets at the deepest levels ",
+        "of the tree. \n The array reperesents a binary search tree in depth first order, in ",
+        " order to move to the left we calculate index*2+1 and to move to the right we calculate  ",
+        "index*2+2"
+      ]
     }
   },
   "BinarySearchTreeDemo": {
     "demo_class_description": {
-      "Demo Class Name": "Lowest Common Ancestor Demo",
-      "Description": ["Description goes here "]
+      "Demo Class Name": "BinarySearchTreeDemo",
+      "Description": [
+        "This file implements a binary search tree comprised of node objects. Each node object has left right and value ",
+        "propereties. To construct a binary search tree we start with the root node, and then set a left pointer to a ",
+        "node with a value less than the root. We do the same thing for the right and set a pointer to the a right node ",
+        "with a value greater than the root. \n This file implements a binary search tree and the ability to add or ",
+        "delete a node. Additionally there are methods to check whether the left and right sides of the tree are ",
+        "organized properly according to the definition of a binary search tree. Finally there is a method to check ",
+        "whether the entire tree is a valid binary search tree by recursively calling itself on the left and right sides ",
+        "of the tree. "
+      ]
     },
     "valid_bst_checks": {
       "Title": "Checks to Verify that This is a Valid BST",
-      "Input Data": "Some input data",
-      "Description": "descrpition goes here"
+      "Input Data": "See output of print tree",
+      "Description": [
+        "This will check to see that all nodes to the left are less than their parents and that all ndoes ",
+        " to the right are greater than their parents. If any of these checks fail then the function will return False"]
     },
     "delete_10_node": {
       "Title": "Delete the 10 node from the binary search tree",
-      "Input Data": "Some input data",
-      "Description": "descrpition goes here"
+      "Input Data": "See output of print tree",
+      "Description": ["This will delete the 10 node from the binary search tree, which will trigger a rotate of some of ",
+      "surrounding nodes"]
     },
     "delete_root_node": {
       "Title": "Delete the root node from the binary search tree",
-      "Input Data": "Some input data",
-      "Description": "descrpition goes here"
+      "Input Data": "See output of print tree",
+      "Description": ["This will delete the root node from the tree which will trigger rotate as well causing one of ",
+      "one of the child nodes to become the root node of the tree"]
     },
     "delete_root_node_twice": {
       "Title": "Delete the root node and then delete the new root node again",
-      "Input Data": "Some input data",
-      "Description": "descrpition goes here"
+      "Input Data": "See output of print tree",
+      "Description": ["This will delete the root node from the tree causing a rotate and new root, and then repeat the action",
+      "causing another rotate and another root to take place"]
     }
   },
   "DepthFirstTraversalDemo": {
