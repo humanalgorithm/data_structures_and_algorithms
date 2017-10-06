@@ -2,22 +2,29 @@
   "FibonacciDemo": {
     "demo_class_description": {
       "Demo Class Name": "Fibonacci number calculation",
-      "Description": ["Description here"]
+      "Description": ["A Fibonacci sequence is created by taking the element at position n and calculating it as the sum",
+        " of the two previous elements in the sequence before it. An example woudl be 1, 1, 2, 3, 5, 8, 13, 21 ... In ",
+        "this file we show three different ways to calculate a fibonacci sequence. 1) in a while loop by adding the two ",
+        "previous elements as the current element 2) by using recursion to build an array and 3) by getting the element ",
+        "at a specified position using recursion to get the values at n-1 and n-2"]
     },
-    "fibonacci_at_position_recursive_calculation_9th_item": {
-      "Title": "Fibonacci of 9th position using recursion to calculate",
-      "Input Data": "Input data",
-      "Description": ["Description goes here"]
+    "fibonacci_at_position_recursive_calculation_5th_item": {
+      "Title": "Fibonacci of 5th position using recursion to calculate",
+      "Input Data": "target_index=5",
+      "Description": ["This method uses recursion to get the value at n-1 and n-2 and then adds them together. In order",
+      " to get the n-1 and n-2 items it will need to recursively call it self all the way back to the first element."]
     },
     "fibonacci_using_loop_7th_item": {
       "Title": "Fibonacci calculation up to 7th item using a loop",
-      "Input Data": "Input data",
-      "Description": ["Description goes here"]
+      "Input Data": "target_index=7",
+      "Description": ["This simple method calculates the item at position n by adding the elements at position n-1 ",
+      "and n-2."]
     },
-    "fibonacci_recursive_array_5th_item": {
+    "fibonacci_recursive_array_9th_item": {
       "Title": "Fibonacci calculation up to 5th item using an array with recursion",
       "Input Data": "Input data",
-      "Description": ["Description goes here"]
+      "Description": ["Recursively calls itself increasing the index by 1 to append to an array. Once it reaches its ",
+      "target value it will reach the base case and return, then all of the recursive calls will return."]
     }
   }
 }
