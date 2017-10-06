@@ -12,7 +12,7 @@ calling itself on the left and right sides of the tree.
 import random
 from . import print_description, SetupDemo, print_tree_from_breadth_first_stack
 
-from depth_first_traversal import DepthFirstTraversal
+from breadth_first_traversal import BreadthFirstTraversal
 from node import node
 
 class BinarySearchTree():
@@ -172,7 +172,7 @@ class BinarySearchTreeDemo(SetupDemo):
 
     def _print_tree(self, root):
         print "current tree is --> "
-        bst_levels_array = DepthFirstTraversal().depth_first_traversal_by_node(root)
+        bst_levels_array = BreadthFirstTraversal().breadth_first_traversal_by_node(root)
         print_tree_from_breadth_first_stack(bst_levels_array, print_method="node")
         print ""
 

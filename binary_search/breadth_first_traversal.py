@@ -1,12 +1,17 @@
 '''
-Depth first traversal
+Breadth First traversal of a binary search tree is when you print all of the elements at each level before moving on
+to the next. In this way we end up printing across the tree from left to right at each level. One way to accomplish this
+is to use a stack to iteratively append the root element, its left and right child and then do the same for the left
+and right nodes. In this demo we demonstrate breadth first traversal using an array of elements ordered to simulate
+a binary search tree and an actuial binary search tree with the nodes connected to each other.
+tree
 '''
 
 from __init__ import print_description, SetupDemo, print_tree_from_breadth_first_stack
 from node import node
 
-class DepthFirstTraversal(object):
-    def depth_first_traversal_by_node(self, current):
+class BreadthFirstTraversal(object):
+    def breadth_first_traversal_by_node(self, current):
         stack = []
         if current == None:
             return
@@ -19,7 +24,7 @@ class DepthFirstTraversal(object):
             i = i + 1
         return [node for node in stack]
 
-    def depth_first_traversal_by_element(self, bst_array):
+    def breadth_first_traversal_by_element(self, bst_array):
         if bst_array == None:
             return None
 
@@ -48,12 +53,13 @@ class DepthFirstTraversal(object):
         return stack
 
 
-class DepthFirstTraversalDemo(SetupDemo):
+class BreadthFirstTraversalDemo(SetupDemo):
     def __init__(self):
-        super(DepthFirstTraversalDemo, self).setup_demo(__file__)
+        super(BreadthFirstTraversalDemo, self).setup_demo(__file__)
 
         self.binary_search_tree_elements_level_order = [14, 10, 18, 4, 12, 16, 20, 3, 5, 11, 13, 15, 17, 19, 22]
     def _setup_nodes(self):
+        #target tree to set up is:
         '''
                       14
                 10             18
@@ -96,32 +102,40 @@ class DepthFirstTraversalDemo(SetupDemo):
         self.root = self.fourteen_node
         return self.root
 
-    @print_description
-    def depth_first_traversal_through_elements(self):
-        depth_first_traversal = DepthFirstTraversal()
-        print "Elements in level are :"
-        print self.binary_search_tree_elements_level_order
+    def _log_search_tree_array(self, level_array):
+        print "Values in level order in array format is :"
+        print level_array
         print " "
-        result = depth_first_traversal.depth_first_traversal_by_element(self.binary_search_tree_elements_level_order)
-        print "resulting depth first stack after traversal is"
-        print result
-        print_tree_from_breadth_first_stack(result)
+
+    def _log_result_from_element_traversal(self, stack_result):
+        print "resulting breadth first stack after traversal is"
+        print stack_result
+        print "stack print is --> "
+        print_tree_from_breadth_first_stack(stack_result)
+
+    def _log_result_from_node_traversal(self, stack_result):
+        print "resulting breadth first stack after traversal is"
+        print [node.value for node in stack_result]
+        print "stack print is --> "
+        print_tree_from_breadth_first_stack(stack_result, print_method="node")
 
     @print_description
-    def depth_first_traversal_through_nodes(self):
+    def breadth_first_traversal_through_elements(self):
+        breadth_first_traversal = BreadthFirstTraversal()
+        self._log_search_tree_array(self.binary_search_tree_elements_level_order)
+        stack_result = breadth_first_traversal.breadth_first_traversal_by_element(self.binary_search_tree_elements_level_order)
+        self._log_result_from_element_traversal(stack_result)
+
+    @print_description
+    def breadth_first_traversal_through_nodes(self):
         self.root = self._setup_nodes()
-        depth_first_traversal = DepthFirstTraversal()
-        print "Values of nodes to print are "
-        print self.binary_search_tree_elements_level_order
-        print " "
-        stack = depth_first_traversal.depth_first_traversal_by_node(self.root)
-        print "resulting stack is "
-        print [node.value for node in stack]
-        print "Tree is --> "
-        print_tree_from_breadth_first_stack(stack, print_method="node")
+        breadth_first_traversal = BreadthFirstTraversal()
+        self._log_search_tree_array(self.binary_search_tree_elements_level_order)
+        stack_result = breadth_first_traversal.breadth_first_traversal_by_node(self.root)
+        self._log_result_from_node_traversal(stack_result)
 
 if __name__ == "__main__":
-    depth_first_demo = DepthFirstTraversalDemo()
-    demos_to_run = [depth_first_demo.depth_first_traversal_through_elements,
-                    depth_first_demo.depth_first_traversal_through_nodes]
+    breadth_first_demo = BreadthFirstTraversalDemo()
+    demos_to_run = [breadth_first_demo.breadth_first_traversal_through_elements,
+                    breadth_first_demo.breadth_first_traversal_through_nodes]
     [func() for func in demos_to_run]
