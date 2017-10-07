@@ -57,7 +57,7 @@ In order to add a new demo you must do the following 3 steps:
 2) Update the associated descriptions.json
 3) Add your function to the list of demos_to_run within the same file.
 
-### Example: 
+### How to Add a Demo Example: 
 Let's say you want to add a new demo to stack.py (located in queues_and_stacks/stacks.py)
 1) Add your class to the demo class
 ```
@@ -102,6 +102,31 @@ if __name__ == "__main__":
 ```
 That's it, then just run python -m queues_and_stacks.stack
 
+## Structure of description JSON files
+There is a descriptions folder for every algorithm area folder in the repo. The descriptions.json contains all of the descriptions
+of all the demos in that folder. The folder of these json files is as follows:
+```
+{
+  "<DemoClassName>": {
+    "demo_class_description": {
+      "Demo Class Name": "<your demo class name>",
+      "Description": [
+        "<Your description goes here>"
+      ]
+    },
+    "<demo function name>": {
+      "Title": "<your demo function title>",
+      "Input Data": "<your input data here>",
+      "Description": ["<your description here>"]
+    },
+   "<demo function name 2>": {
+      "Title": "<your demo 2 function title>",
+      "Input Data": "<your input data here>",
+      "Description": ["<your description here>"]
+    }
+  } 
+}
+```
 
 
 
