@@ -128,6 +128,18 @@ of all the demos in that folder. The folder of these json files is as follows:
 }
 ```
 
+## print_description Decorator
+The print_description decorator is implemented in data_structures_and_algorithms/utility/print_decorator.py
+This decorator inspects the function that called it, gets its location and then reads from the description.json that is in the 
+folder of the invoking class. 
+
+For example if you put a @print_decorator on top of a function in /binary_search/binary_search_tree.py the decorator will look for descriptions in binary_search/descriptions/descriptions.json
+
+# Binary Search Tree Print
+In utility/print_tree.py there is a utility that is used for printing out binary search trees. it works by calculating the 
+amount of spaces and offset increasing in proportion to the level of the tree that it is printing. In order to use it, call it
+with a binary search tree that is ordered in depth first traversal order. It is currently compatible printing a binary search 
+tree from an array as well as from connected node objects. 
 
 
 
