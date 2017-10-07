@@ -3,28 +3,36 @@
     "demo_class_description": {
       "Demo Class Name": "AllAnagramsDemo",
       "Description": [
-        "Description here"
+        "In this coding problem we take in a string and then print out all of its possible permutations. In this file we",
+        "show three different ways to accomplish this 1) anagrams_recursion_on_pre_and_post_string recursively joins a ",
+        "prestring and poststring in every posssible combination and in 2) anagrams_swap_on_step_and_index we use an ",
+        "inreasing step that acts as a marker to swap every single element in the array with that step and call itself ",
+        "for each permutation. 3) anagrams_swap_on_step_and_index_2 works the same but collapses some of the functionality",
+        " into fewer lines. "
       ]
     },
     "anagrams_recursion_on_pre_and_post_string": {
       "Title": "anagrams_recursion_on_pre_and_post_string",
-      "Input Data": "Input data",
+      "Input Data": "['a', 'b', 'c']",
       "Description": [
-        "Description goes here"
+        "Uses a prestring a post string to build up all of the possible permutations. For each iteration take an element",
+        "from the post string and swap it into the prestring then combine it with every permutation of the post string"
       ]
     },
     "anagrams_swap_on_step_and_index": {
       "Title": "anagrams_swap_on_step_and_index",
-      "Input Data": "Input data",
+      "Input Data": "['1', '2', '3']",
       "Description": [
-        "Description goes here"
+        "For each step swap every element up to the step number, then call the swap recursively on that until the ",
+        "number of iterations (the current index) is equal to the step"
       ]
     },
     "anagrams_swap_on_step_and_index_2": {
       "Title": "anagrams_swap_on_step_and_index_2",
-      "Input Data": "Input data",
+      "Input Data": "['1', '2', '3']",
       "Description": [
-        "Description goes here"
+        "For each step swap every element up to the step number, then call the swap recursively on that until the ",
+        "number of iterations (the current index) is equal to the step"
       ]
     }
   },

@@ -1,7 +1,16 @@
+"""
+In this coding problem we take in a string and then print out all of its possible permutations. In this file we
+show three different ways to accomplish this 1) anagrams_recursion_on_pre_and_post_string recursively joins a
+prestring and poststring in every posssible combination and in 2) anagrams_swap_on_step_and_index we use an inreasing
+step that acts as a marker to swap every single element in the array with that step and call itself for each
+permutation. 3) anagrams_swap_on_step_and_index_2 works the same but collapses some of the functionality into
+fewer lines
+"""
+
 from . import SetupDemo, print_description
 
 class AllAnagrams(object):
-    def anagrams_swap_on_step_and_index(self, wordIn, step, log):
+    def anagrams_swap_on_step_and_index(self, wordIn, step, log=lambda *args, **kwargs: kwargs):
         if step == len(wordIn):
             print "Anagram found: " + "".join(wordIn)
             return
@@ -15,7 +24,7 @@ class AllAnagrams(object):
             self.anagrams_swap_on_step_and_index(wordCopy, step+1, log)
             log("return", x=x, step=step, wordIn=wordIn)
 
-    def anagrams_swap_on_step_and_index_2(self, string, step, log):
+    def anagrams_swap_on_step_and_index_2(self, string, step, log=lambda *args, **kwargs: kwargs):
         # if we've gotten to the end, print the permutation
         if step == len(string):
             print "Anagram found: " + "".join(string)
@@ -31,7 +40,7 @@ class AllAnagrams(object):
             self.anagrams_swap_on_step_and_index_2(string_copy, step + 1, log)
             log("return", string=string, step=step, i=i)
 
-    def anagrams_recursion_on_pre_and_post_string(self, prestring, poststring, log):
+    def anagrams_recursion_on_pre_and_post_string(self, prestring, poststring, log=lambda *args, **kwargs: kwargs):
             if len(poststring) <= 1:  #if we have tried all the combinations of post string
                 print ''.join(prestring + poststring) #print the string
                 return
@@ -77,7 +86,7 @@ class AllAnagramsDemo(SetupDemo):
                                                                 kwargs.get('step'),
                                                                 kwargs.get('string'))
 
-    def _print_pre_post_string(self, prestring, poststring, execution):
+    def _log_pre_post_string(self, prestring, poststring, execution):
         if execution == 'before':
             print "calling anagrams with prestring=" + str(prestring) + " and poststring=" + str(poststring)
         elif execution == "after":
@@ -87,13 +96,13 @@ class AllAnagramsDemo(SetupDemo):
     def anagrams_recursion_on_pre_and_post_string(self):
         all_anagrams = AllAnagrams()
         word = list('abc')
-        all_anagrams.anagrams_recursion_on_pre_and_post_string(prestring=[], poststring=word, log=self._print_pre_post_string)
+        all_anagrams.anagrams_recursion_on_pre_and_post_string(prestring=[], poststring=word, log=self._log_pre_post_string)
 
     @print_description
     def anagrams_swap_on_step_and_index(self):
         all_anagrams = AllAnagrams()
         word = list('123')
-        all_anagrams.anagrams_swap_on_step_and_index(word, 0, self._log_anagrams_swap_on_step_and_index)
+        all_anagrams.anagrams_swap_on_step_and_index(word, 0, log=self._log_anagrams_swap_on_step_and_index)
 
     @print_description
     def anagrams_swap_on_step_and_index_2(self):
