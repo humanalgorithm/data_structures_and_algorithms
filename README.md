@@ -25,13 +25,17 @@ python -m binary_search.binary_search_tree
 ## How  Does It Work?
 Each demo follows the below flow: 
 
-demo class instantiates object class
-demo class invokes print_description decorator
-print_description decorator looks at descriptions.json of the class that is calling it.
-there is a descriptions.json within the descriptions folder of each demo folder in this repo. 
+demo class instantiates object class --> 
+
+demo class invokes print_description decorator -->
+
+print_description decorator looks at descriptions.json of the class that is calling it -->
+
+there is a descriptions.json within the descriptions folder of each demo folder in this repo. -->
+
 descriptions are printed to the screen along with output of run
 
-##Folder Structure
+## Folder Structure
 ```
 data_structures_and_algorithms/
   <algorithm area>/
@@ -53,7 +57,7 @@ In order to add a new demo you must do the following 3 steps:
 2) Update the associated descriptions.json
 3) Add your function to the list of demos_to_run within the same file.
 
-###Example: 
+### Example: 
 Let's say you want to add a new demo to stack.py (located in queues_and_stacks/stacks.py)
 1) Add your class to the demo class
 ```
