@@ -1,6 +1,8 @@
 '''
-Checks to see if one string is a substring of another. Algorithm should check whether
-that string is a match both forwards and backwards wrapping around the array when nessecary.
+In this coding problem we check to see if one string is a rotation of another. To solve this problem we need to be able
+to check if the string is a match even if it wraps around in the array or is a match when reading backwards. The
+key to solving this problem is to recognize that we can use the mod % function to calculate the index when looking
+at the array for the perspective of wrapping around.
 '''
 
 from . import print_description, SetupDemo
@@ -44,17 +46,17 @@ class CheckStringRotationDemo(SetupDemo):
         super(CheckStringRotationDemo, self).setup_demo(__file__)
 
         self.base_string = "waterbottle"
-        self.string2 = "bottlewater"
+        self.string2 = "waterbottle"
         self.string3 = "bottlewater"
-
-        self.string3 = "elttobretaw"
-        self.string4 = "ttobretawel"
-        self.string5 = "botisnotwater"
-        self.string6 = "elttibretaw"
+        self.string4 = "elttobretaw"
+        self.string5 = "ttobretawel"
+        self.string6 = "botisnotwater"
+        self.string7 = "elttibretaw"
 
     def _log_result_of_comparision(self, base_string, compare_string, result):
         message = "Checking to see if string is a rotation of base string -->"
         print message
+        print ""
         print "base string={}, comparision string={}, result={}".format(base_string, compare_string, result)
 
     @print_description
@@ -72,23 +74,31 @@ class CheckStringRotationDemo(SetupDemo):
         self._log_result_of_comparision(self.base_string, compare_string, result)
 
     @print_description
-    def check_string_backwards_wraparound_match(self):
+    def check_string_backwards_match(self):
         check_substring = CheckStringRotation()
         compare_string = self.string4
         result = check_substring.check_is_rotation(self.base_string, compare_string)
         self._log_result_of_comparision(self.base_string, compare_string, result)
 
+
     @print_description
-    def check_forwards_string_no_match(self):
+    def check_string_backwards_wraparound_match(self):
         check_substring = CheckStringRotation()
         compare_string = self.string5
         result = check_substring.check_is_rotation(self.base_string, compare_string)
         self._log_result_of_comparision(self.base_string, compare_string, result)
 
     @print_description
-    def check_backwards_no_match(self):
+    def check_forwards_string_no_match(self):
         check_substring = CheckStringRotation()
         compare_string = self.string6
+        result = check_substring.check_is_rotation(self.base_string, compare_string)
+        self._log_result_of_comparision(self.base_string, compare_string, result)
+
+    @print_description
+    def check_backwards_no_match(self):
+        check_substring = CheckStringRotation()
+        compare_string = self.string7
         result = check_substring.check_is_rotation(self.base_string, compare_string)
         self._log_result_of_comparision(self.base_string, compare_string, result)
 

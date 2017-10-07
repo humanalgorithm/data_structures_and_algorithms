@@ -32,43 +32,52 @@
     "demo_class_description": {
       "Demo Class Name": "CheckStringRotationDemo",
       "Description": [
-        "Checks to see if one string is a substring of anoter. Algorithm should check whether that string is a match ",
-        "both forwards and backwards wrapping around the array when nessecary."
+        "In this coding problem we check to see if one string is a rotation of another. To solve this problem we need ",
+        "to be able to check if the string is a match even if it wraps around in the array or is a match when reading ",
+        "backwards. The key to solving this problem is to recognize that we can use the mod % function to calculate the ",
+        "index when looking at the array for the perspective of wrapping around"
       ]
     },
     "check_string_regular_forwards_match": {
       "Title": "check_string_regular_forwards_match",
-      "Input Data": "Input data",
+      "Input Data": "Base string=waterbottle, compare_string=waterbottle",
       "Description": [
-        "Description goes here"
+        "Here the string to compare is a match in the forwards direction and does not require a wraparound check"
       ]
     },
     "check_string_forwards_wraparound_match": {
       "Title": "check_string_forwards_wraparound_match",
-      "Input Data": "Input data",
+      "Input Data": "Base string=watterbottle, compare_string=bottlewater",
       "Description": [
-        "Description goes here"
+        "Here the string to compare is a match in the forwards direction and requires a wraparound check"
+      ]
+    },
+    "check_string_backwards_match": {
+      "Title": "check_string_backwards_match",
+      "Input Data": "Base string=watterbottle, compare_string=elttobretaw",
+      "Description": [
+        "Here the string to compare is a match in the backwards direction and does not require a wraparound check"
       ]
     },
     "check_string_backwards_wraparound_match": {
       "Title": "check_string_backwards_wraparound_match",
-      "Input Data": "Input data",
+      "Input Data": "Base string=watterbottle, compare_string=ttobretawel",
       "Description": [
-        "Description goes here"
+        "Here the string to compare is a match in the backwards direction and requries a wraparound check"
       ]
     },
     "check_forwards_string_no_match": {
       "Title": "check_forwards_string_no_match",
-      "Input Data": "Input data",
+      "Input Data": "Base string=waterbottle, compare_string=botisnotwater",
       "Description": [
-        "Description goes here"
+        "Here the string to compare is not a match either in the forwards or backwards directions"
       ]
     },
     "check_backwards_no_match": {
       "Title": "check_backwards_no_match",
-      "Input Data": "Input data",
+      "Input Data": "Base string=waterbottle, compare_string=elttibretaw",
       "Description": [
-        "Description goes here"
+        "Here the string to compare is not a match either in the forwards or backwards directions"
       ]
     }
   },
