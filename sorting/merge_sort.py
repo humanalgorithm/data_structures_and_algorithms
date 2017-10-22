@@ -93,7 +93,7 @@ class MergeSortDemo(SetupDemo):
     def sort_data_set_small(self):
         self._run_merge_sort(data_set=self.data_set_small)
 
-
-ms_demo = MergeSortDemo()
-demos_to_run = [ms_demo.sort_data_set1, ms_demo.sort_data_set2, ms_demo.sort_data_set_small]
-[func() for func in demos_to_run]
+if __name__ == "__main__":
+    ms_demo = MergeSortDemo()
+    demos_to_run = [ms_demo.sort_data_set1, ms_demo.sort_data_set2, ms_demo.sort_data_set_small]
+    [func() for func in demos_to_run]

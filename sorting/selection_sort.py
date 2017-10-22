@@ -60,7 +60,7 @@ class SelectionSortDemo(SetupDemo):
     def sort_data_set_small(self):
         self._run_selection_sort(data_set=self.data_set_small)
 
-
-ssort_demo = SelectionSortDemo()
-demos_to_run = [ssort_demo.sort_data_set1, ssort_demo.sort_data_set2, ssort_demo.sort_data_set_small]
-[func() for func in demos_to_run]
+if __name__ == "__main__":
+    ssort_demo = SelectionSortDemo()
+    demos_to_run = [ssort_demo.sort_data_set1, ssort_demo.sort_data_set2, ssort_demo.sort_data_set_small]
+    [func() for func in demos_to_run]

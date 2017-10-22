@@ -64,7 +64,7 @@ class BubbleSortDemo(SetupDemo):
     def sort_data_set_small(self):
         self._run_bubble_sort(data_set=self.data_set_small)
 
-
-bs_demo = BubbleSortDemo()
-demos_to_run = [bs_demo.sort_data_set1, bs_demo.sort_data_set2, bs_demo.sort_data_set_small]
-[func() for func in demos_to_run]
+if __name__ == "__main__":
+    bs_demo = BubbleSortDemo()
+    demos_to_run = [bs_demo.sort_data_set1, bs_demo.sort_data_set2, bs_demo.sort_data_set_small]
+    [func() for func in demos_to_run]

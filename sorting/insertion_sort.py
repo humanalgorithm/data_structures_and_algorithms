@@ -56,7 +56,7 @@ class InsertionSortDemo(SetupDemo):
     def sort_data_set_small(self):
         self._run_insertion_sort(data_set=self.data_set_small)
 
-
-is_demo = InsertionSortDemo()
-demos_to_run = [is_demo.sort_data_set1, is_demo.sort_data_set2, is_demo.sort_data_set_small]
-[func() for func in demos_to_run]
+if __name__ == "__main__":
+    is_demo = InsertionSortDemo()
+    demos_to_run = [is_demo.sort_data_set1, is_demo.sort_data_set2, is_demo.sort_data_set_small]
+    [func() for func in demos_to_run]

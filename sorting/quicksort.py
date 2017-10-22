@@ -82,7 +82,7 @@ class QuickSortDemo(SetupDemo):
     def sort_data_set_small(self):
         self._run_quick_sort(data_set=self.data_set_small)
 
-
-qs_demo = QuickSortDemo()
-demos_to_run = [qs_demo.sort_data_set1, qs_demo.sort_data_set2, qs_demo.sort_data_set_small]
-[func() for func in demos_to_run]
+if __name__ == "__main__":
+    qs_demo = QuickSortDemo()
+    demos_to_run = [qs_demo.sort_data_set1, qs_demo.sort_data_set2, qs_demo.sort_data_set_small]
+    [func() for func in demos_to_run]
