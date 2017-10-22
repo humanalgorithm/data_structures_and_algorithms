@@ -3,36 +3,43 @@
     "demo_class_description": {
       "Demo Class Name": "PathOnGraphDemo",
       "Description": [
-        "Sets up a graph and then provides the ability to see if there is a path between ",
-        "two nodes on the graph. In addition this demo logs all of the possible paths from one node to another"
+        "Sets up a graph and then provides the ability to see if there is a path between two nodes on the graph. ",
+        "In addition this demo logs all of the possible paths from one node to another. In this demo we set up a ",
+        "directional graph where some nodes paths go both ways but other nodes only go one way. In addition in this ",
+        "graph set up we make the assumption that a graph can only have 4 connections, with an outgoing up path, down ",
+        "path and middle path and an incoming previous path. \n\n The solution to this problem as it is implemented ",
+        "would be very similar if there was some unspecified possible number of connections for each node, we would just",
+        "need to loop through all of that nodes connections while calling recursion on each path."
       ]
     },
     "check_path_from_5_to_11": {
       "Title": "check_path_from_5_to_11",
       "Input Data": "See graph setup in code comments",
       "Description": [
-        "<description goes here>"
+        "Here we check if there is a valid path from 5 to l1 which involves computing the longest path on this graph "
       ]
     },
     "check_path_from_8_to_3": {
       "Title": "check_path_from_8_to_3",
       "Input Data": "See graph setup in code comments",
       "Description": [
-        "<description goes here>"
+        "Here we check to see if there is a valid path from 8 to 3, which there is not"
       ]
     },
     "record_path_from_5_to_11": {
-      "Title": "check_path_from_5_to_11",
+      "Title": "record_path_from_5_to_11",
       "Input Data": "See graph setup in code comments",
       "Description": [
-        "<description goes here>"
+        "Here we record the path from 5 to l1 which involves computing the longest path on this graph ",
+        "In addition there are two other possible paths from 5 to 11 that we will see."
       ]
     },
     "record_path_from_1_to_11": {
-      "Title": "check_path_from_5_to_11",
+      "Title": "check_path_from_1_to_11",
       "Input Data": "See graph setup in code comments",
       "Description": [
-        "<description goes here>"
+        "Here we record the path from 1 to 11 which will show the possible paths from the first node in the graph ",
+        "to the last node in the graph."
       ]
     }
   }

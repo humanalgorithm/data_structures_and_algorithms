@@ -2,16 +2,25 @@
 Sets up a graph and then provides the ability to see if there is a path between two nodes on the graph. \
 In addition this demo logs all of the possible paths from one node to another.
 
+In this demo we set up a directional graph where some nodes paths go both ways but other nodes only go
+one way. In addition in this graph set up we make the assumption that a graph can only have 4 connections,
+with an outgoing up path, down path and middle path and an incoming previous path.
 
-We will set up the following directed graph as illustrated below:
-                 > -------------------------------|
-     -> 2  -- > 3                9  <             |
-   /                                  \           ?
-1 ->  ---> 6 ---> 7                    <-> 10 --> 11
-  \                 ->  \            /
-    <-> 4 <---> 5          <-> 8 <->
+The solution to this problem as it is implemented would be very similar if there was some unspecified possible number
+of connections for each node, we would just need to loop through all of that nodes connections while calling recursion
+on each path.
 
-"""
+    We will set up the following directed graph as illustrated below:
+                     > -------------------------------|
+         -> 2  -- > 3                9  <             |
+       /                                  \           ?
+    1 ->  ---> 6 ---> 7                    <-> 10 --> 11
+      \                 ->  \            /      ^
+        <-> 4 <---> 5          <-> 8 <->        |
+                    ?                           |
+                    - --------------------------
+    """
+
 import copy
 from . import SetupDemo, print_description
 
