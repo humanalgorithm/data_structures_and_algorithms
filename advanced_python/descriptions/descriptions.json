@@ -1,11 +1,12 @@
 {
   "LambdaDemo": {
-    "demo_class_description":
-    {
+    "demo_class_description": {
       "Demo Class Name": "Lambda Demo",
-      "Description": ["Demonstrates various uses of the lambda function in python. Lambda is a utility that allows you to",
-                      " construct an anonymous function, which is a function that does not have a name. Lambda is a powerful",
-                      " tool because you can compute and construct data using fewer lines of code."]
+      "Description": [
+        "Demonstrates various uses of the lambda function in python. Lambda is a utility that allows you to",
+        " construct an anonymous function, which is a function that does not have a name. Lambda is a powerful",
+        " tool because you can compute and construct data using fewer lines of code."
+      ]
     },
     "demo_lambda_sort_dicts_by_key_using_function": {
       "Title": "Sort Dicts by Key Using Function",
@@ -54,6 +55,35 @@
         "resulting list. Here a list of numbers is provided and then it is passed to a ",
         "lambda which calculates a value for every element in the list and then returns",
         " a new list."
+      ]
+    }
+  },
+  "GeneratorDemo": {
+    "demo_class_description": {
+      "Demo Class Name": "Generator Demo",
+      "Description": ["Generator is a python utility that allows you to partially execute a function and then return ",
+        "partial results to a calling function. In this way the calling function handles the flow of control for the ",
+        "generator function. For example if we have a loop through a list of elements we can stop the loop and then ",
+        "return the result back to the calling function, the calling function can then tell the generator to loop over ",
+        "one more element and so on."]
+    },
+    "powers_of_integer": {
+      "Title": "Powers of integer",
+      "Input Data": "base = 2, max = 1000",
+      "Description": ["Here we use a generator to calculate the powers of a base integer up to a max value. Using the ",
+        "generator we can invoke one return value at a time rather than running through the entire loop"
+      ]
+    },
+    "send_reminder_emails": {
+      "Title": "Send reminder emails",
+      "Input Data": "Send Reminder Emails",
+      "Description": ["Here we simulate the processing of user data and show how the generator can be used to break out ",
+        "loops of functionality. In the process customer data function we can simply say that we will loop through ",
+        "all of the customers and then yield a customer at each step. Using the generator from another function we ",
+        "know that we can pull out one processed customer at a time. This would be useful especially in the case that ",
+        "the processing of each customer was very complicated, that way we can pull out the processing functionality into ",
+        "its own method or class. Using the generator we are able to seperate the processing of the customer from ",
+        "the send email process."
       ]
     }
   }
